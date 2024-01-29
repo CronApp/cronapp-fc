@@ -1,0 +1,84 @@
+{
+  "customId": "query710199",
+  "queryName": "Players with Team Name",
+  "sourceType": "entityFullName",
+  "baseEntity": null,
+  "blockly": null,
+  "entitySimpleName": "Player",
+  "entityFullName": "fc.entity.Player",
+  "query": {
+    "isEmpty": true,
+    "isRawSql": true,
+    "sqlContent": "select p.id, CONCAT(p.name, \u0027 - \u0027, p.team.name) player_with_team_name  from Player p",
+    "multiTenant": false,
+    "paginatorAutomatic": false,
+    "pagination": false
+  },
+  "queryParamsValues": [],
+  "verbs": {
+    "GET": true,
+    "GETAuthorities": null,
+    "POST": true,
+    "POSTAuthorities": null,
+    "PUT": true,
+    "PUTAuthorities": null,
+    "DELETE": true,
+    "DELETEAuthorities": null,
+    "FILTER": true,
+    "FILTERAuthorities": null,
+    "COUNT": true,
+    "COUNTAuthorities": null
+  },
+  "events": {
+    "beforeInsert": null,
+    "beforeUpdate": null,
+    "beforeDelete": null,
+    "afterInsert": null,
+    "afterUpdate": null,
+    "afterDelete": null,
+    "onNavigate": null,
+    "onAuthorize": null,
+    "onError": null
+  },
+  "defaultValues": {
+    "id": null,
+    "name": null,
+    "img": null,
+    "team": null,
+    "position": null,
+    "totalGamesPlayed": null,
+    "price": null,
+    "oldPrice": null
+  },
+  "defaultValuesProperties": {
+    "id": null,
+    "name": null,
+    "img": null,
+    "team": null,
+    "position": null,
+    "totalGamesPlayed": null,
+    "price": null,
+    "oldPrice": null
+  },
+  "security": {
+    "id": null,
+    "name": null,
+    "img": null,
+    "team": null,
+    "position": null,
+    "totalGamesPlayed": null,
+    "price": null,
+    "oldPrice": null
+  },
+  "calcFields": {},
+  "calcFieldsSecurity": {},
+  "calcFieldsProperties": {},
+  "headers": {},
+  "errorHandles": {
+    "primaryKey": null,
+    "foreignKey": null
+  },
+  "serviceUrl": "api/cronapi/odata/v2/fc/query710199/",
+  "audit": false,
+  "swagger": false
+}

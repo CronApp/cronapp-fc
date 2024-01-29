@@ -1,0 +1,848 @@
+<?xml version="1.0" encoding="UTF-8"?><blockly audit="false" blocklyType="JAVA" bpmnAble="false" formTarget="src/main/mobileapp/www/views/logged/dashboard.view.html" resourceType="JAVA" ruleDescription="Dashboard" ruleName="Dashboard" ruleSynchronous="false" ruleTimeout="300" ruleType="I" soap="false" swagger="false">
+  <metadata scale="1" scrollx="407.9" scrolly="-813.1000000000004" target="Anb:u5+^,0vLkL9QIqn5"/>
+  <block asynccall="false" colour="#995ba5" id="Anb:u5+^,0vLkL9QIqn5" origintype="procedures_defreturn" output="false" tooltip="Cria uma função que possui um valor de retorno." type="procedures_defreturn" x="-277" y="38">
+    <field customattributes="" name="NAME">OnLoad</field>
+    <comment h="80" pinned="false" w="160">Dashboard</comment>
+    <statement name="STACK">
+      <block asynccall="false" colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="0n:jMnD+u!.kIG|^Mu[P" origintype="variables_set" output="false" tooltip="Define esta variável para o valor da entrada." type="variables_set">
+        <field customattributes="" name="VAR">myTeam</field>
+        <value name="VALUE">
+          <block asynccall="false" colour="#aa2f00" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="W~;`UwZp=CaBB9w%0R%~" multilayer="false" namespace="cronapi.database.Operations.query" origintype="procedures_sql_callreturn" output="true" returntype="ObjectType.DATASET" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EAbrir%20consulta%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20para%20realizar%20consultas%20no%20banco%20de%20dados%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Entidade%20:%20Texto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Consulta%20SQL%20:%20Texto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Par%C3%A2metros%20para%20consulta%20:%20Lista%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Tabela%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22http://localhost:80/help?type=blockly&amp;amp;id=cronapi.database.Operations.query%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_sql_callreturn">
+            <mutation data="%7B%22queryBuilderJson%22:%7B%22isValid%22:true,%22isEmpty%22:false,%22operationType%22:%22object%22,%22type%22:%22select%22,%22rulesEntity%22:%5B%7B%22entity%22:%22MyTeam%22,%22namespace%22:%22fc.entity.MyTeam%22,%22alias%22:%22m%22%7D%5D,%22rulesSelect%22:%5B%7B%22func%22:%22get%22,%22field%22:%22m%22,%22type%22:%22string%22%7D%5D,%22rulesGroupBy%22:%5B%5D,%22rulesHaving%22:%5B%5D,%22rulesOrderBy%22:%5B%5D,%22rules%22:%7B%22condition%22:%22AND%22,%22rules%22:%5B%7B%22id%22:%22m.userId%22,%22field%22:%22m.userId%22,%22type%22:%22string%22,%22input%22:%22text%22,%22operator%22:%22equal%22,%22value%22:%22:userId%22,%22valueIsField%22:false%7D%5D,%22not%22:false,%22valid%22:true%7D,%22isRawSql%22:false,%22multiTenant%22:false,%22paginatorAutomatic%22:false,%22pagination%22:false%7D,%22entity%22:%22MyTeam%22,%22entityFullName%22:%22fc.entity.MyTeam%22,%22filter%22:%22select%20m%20from%20MyTeam%20m%20where%20m.userId%20=%20:userId%22,%22queryMode%22:%22object%22,%22params%22:%22%5B%5C%22userId%5C%22%5D%22%7D" name="{{cronapi.database.Operations.query}}">
+              <arg name="userId"/>
+            </mutation>
+            <value name="ARG0">
+              <block asynccall="false" colour="#487f7f" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="1A.X~DXwoo4x#D;H!Z(5" multilayer="false" namespace="cronapi.util.Operations.callBlockly" origintype="procedures_callblockly_callreturn" output="true" returntype="ObjectType.OBJECT" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EChamar%20Bloco%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20para%20chamar%20um%20bloco%20de%20programa%C3%A7ao%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Bloco%20:%20Objeto%3C/span%3E%3Cdiv%3E%20Nome%20do%20bloco%3C/div%3E%3Cspan%3E%20-%20Par%C3%A2metros%20:%20Objeto%3C/span%3E%3Cdiv%3E%20Par%C3%A2metros%20a%20serem%20passados%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Objeto%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22http://localhost:80/help?type=blockly&amp;amp;id=cronapi.util.Operations.callBlockly%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callblockly_callreturn">
+                <mutation data="%7B%22name%22:%22UserManager%22,%22class%22:%22blockly.UserManager%22,%22function%22:%22GetUserIdByLogin%22,%22oldName%22:%22GetUserIdByLogin%22,%22params%22:%22%5B%5C%22login%5C%22%5D%22,%22argumentsIds%22:%5B%22e986361b%22%5D,%22type%22:%22java%22,%22namespace%22:%22blockly.UserManager%22,%22jsonBlocklySelected%22:%7B%22namespace%22:%22blockly.UserManager%22,%22sourcePath%22:%22src/main/java/blockly/UserManager.blockly%22,%22language%22:%22java%22,%22class%22:%22blockly.UserManager%22,%22methods%22:%5B%7B%22name%22:%22BeforeUpdate%22,%22hasReturn%22:%22true%22,%22params%22:%5B%22Entidade&amp;lt;app.entity.User&amp;gt;%22%5D,%22paramsMap%22:%7B%22Entidade&amp;lt;app.entity.User&amp;gt;%22:%22bb6c3b84%22%7D%7D,%7B%22name%22:%22BeforeInsert%22,%22hasReturn%22:%22true%22,%22params%22:%5B%22Entidade&amp;lt;app.entity.User&amp;gt;%22%5D,%22paramsMap%22:%7B%22Entidade&amp;lt;app.entity.User&amp;gt;%22:%22caee5f29%22%7D%7D,%7B%22name%22:%22BeforeDelete%22,%22hasReturn%22:%22true%22,%22params%22:%5B%22Entidade&amp;lt;app.entity.User&amp;gt;%22%5D,%22paramsMap%22:%7B%22Entidade&amp;lt;app.entity.User&amp;gt;%22:%223f923a9d%22%7D%7D,%7B%22name%22:%22Normalize%22,%22hasReturn%22:%22true%22,%22params%22:%5B%22Entidade&amp;lt;app.entity.User&amp;gt;%22%5D,%22paramsMap%22:%7B%22Entidade&amp;lt;app.entity.User&amp;gt;%22:%229becc432%22%7D%7D,%7B%22name%22:%22GetUserIdByLogin%22,%22hasReturn%22:%22true%22,%22params%22:%5B%22login%22%5D,%22paramsMap%22:%7B%22login%22:%22e986361b%22%7D%7D%5D%7D%7D" name="{{cronapi.util.Operations.callBlockly}}">
+                  <arg id="e986361b" name="login"/>
+                </mutation>
+              </block>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block asynccall="false" colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="dahw;|?AxW`BIoG+xtG_" origintype="variables_set" output="false" tooltip="Define esta variável para o valor da entrada." type="variables_set">
+            <field customattributes="" name="VAR">round</field>
+            <value name="VALUE">
+              <block asynccall="false" colour="#aa2f00" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="e!lo!rFWdhH*Csn~t0Gv" multilayer="false" namespace="cronapi.database.Operations.query" origintype="procedures_sql_callreturn" output="true" returntype="ObjectType.DATASET" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EAbrir%20consulta%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20para%20realizar%20consultas%20no%20banco%20de%20dados%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Entidade%20:%20Texto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Consulta%20SQL%20:%20Texto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Par%C3%A2metros%20para%20consulta%20:%20Lista%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Tabela%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22http://localhost:80/help?type=blockly&amp;amp;id=cronapi.database.Operations.query%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_sql_callreturn">
+                <mutation data="%7B%22queryBuilderJson%22:%7B%22isValid%22:true,%22isEmpty%22:false,%22operationType%22:%22object%22,%22type%22:%22select%22,%22rulesEntity%22:%5B%7B%22entity%22:%22Round%22,%22namespace%22:%22fc.entity.Round%22,%22alias%22:%22r%22%7D%5D,%22rulesSelect%22:%5B%7B%22func%22:%22get%22,%22field%22:%22r%22,%22type%22:%22string%22%7D%5D,%22rulesGroupBy%22:%5B%5D,%22rulesHaving%22:%5B%5D,%22rulesOrderBy%22:%5B%7B%22func%22:%22get%22,%22field%22:%22r.number%22,%22order%22:%22asc%22%7D%5D,%22rules%22:%7B%22condition%22:%22AND%22,%22rules%22:%5B%7B%22id%22:%22r.session.finished%22,%22field%22:%22r.session.finished%22,%22type%22:%22boolean%22,%22input%22:%22text%22,%22operator%22:%22equal%22,%22value%22:%22false%22,%22valueIsField%22:false%7D,%7B%22id%22:%22r.finished%22,%22field%22:%22r.finished%22,%22type%22:%22boolean%22,%22input%22:%22text%22,%22operator%22:%22equal%22,%22value%22:%22false%22,%22valueIsField%22:false%7D%5D,%22not%22:false,%22valid%22:true%7D,%22isRawSql%22:false,%22multiTenant%22:false,%22paginatorAutomatic%22:false,%22pagination%22:false%7D,%22entity%22:%22Round%22,%22entityFullName%22:%22fc.entity.Round%22,%22filter%22:%22select%20r%20from%20Round%20r%20where%20r.session.finished%20=%20false%20AND%20r.finished%20=%20false%20%20%20order%20by%20r.number%20asc%22,%22queryMode%22:%22object%22,%22params%22:%22%5B%5D%22,%22wizardType%22:%22SELECT%22%7D" name="{{cronapi.database.Operations.query}}"/>
+              </block>
+            </value>
+            <next>
+              <block asynccall="false" colour="#934848" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="GhM%yP(]FEqM6]M]0$d." multilayer="true" namespace="cronapi.screen.changeContent" origintype="procedures_callnoreturn" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EModificar%20conte%C3%BAdo%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20altera%20o%20conte%C3%BAdo%20pelo%20id,%20por%20exemplo,%20o%20conte%C3%BAdo%20de%20um%20r%C3%B3tulo%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Obter%20identificador%20:%20Objeto%3C/span%3E%3Cdiv%3E%20Identificador%20(id)%20a%20ser%20obtido%20do%20Formul%C3%A1rio%20selecionado%3C/div%3E%3Cspan%3E%20-%20Conte%C3%BAdo%20:%20Texto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Compilar?%20:%20L%C3%B3gico%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22http://localhost:80/help?type=blockly&amp;amp;id=cronapi.screen.changeContent%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callnoreturn">
+                <mutation name="{{cronapi.screen.changeContent}}" return-raw-type="undefined">
+                  <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.OBJECT" name="Obter identificador"/>
+                  <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STRING" name="Conteúdo"/>
+                  <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.BOOLEAN" name="Compilar?"/>
+                </mutation>
+                <value name="ARG0">
+                  <block asynccall="false" colour="#934848" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="5;?P8tD5{`..n2wDtA+8" origintype="ids_from_screen" output="true" type="ids_from_screen">
+                    <field customattributes="" name="SELECT">teamName</field>
+                  </block>
+                </value>
+                <value name="ARG1">
+                  <shadow asynccall="false" colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="O#voGy:5_W2P1tC?9wyT" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                    <field customattributes="" name="TEXT"/>
+                  </shadow>
+                  <block asynccall="false" colour="#aa2f00" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="M2FLaeT*p~2v:5Vf@5I^" multilayer="false" namespace="cronapi.database.Operations.getField" origintype="procedures_get_field" output="true" returntype="ObjectType.OBJECT" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EObter%20campo%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20para%20obter%20campo%20do%20registro%20do%20cursor%20atual%20da%20fonte%20de%20dados%20%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Fonte%20de%20dados%20:%20Objeto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Nome%20do%20campo%20:%20Texto%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Objeto%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22http://localhost:80/help?type=blockly&amp;amp;id=cronapi.database.Operations.getField%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_get_field">
+                    <mutation name="{{cronapi.database.Operations.getField}}">
+                      <arg name="Fonte de dados"/>
+                      <arg name="Nome do campo"/>
+                    </mutation>
+                    <value name="PARAM0">
+                      <block asynccall="false" colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="50(_6=1$V(hE0[;}9xoU" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field customattributes="" name="VAR">myTeam</field>
+                      </block>
+                    </value>
+                    <value name="PARAM1">
+                      <block asynccall="false" colour="#db802b" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="M*b`,?QU`Ne`8w6to=tN" origintype="procedures_get_field_datasource" output="true" type="procedures_get_field_datasource">
+                        <mutation name="">
+                          <arg label="m" value="this[0]"/>
+                          <arg label="m.player1.team.id" value="this[0].player1.team.id"/>
+                          <arg label="m.player1.position.id" value="this[0].player1.position.id"/>
+                          <arg label="m.player1.id" value="this[0].player1.id"/>
+                          <arg label="m.id" value="this[0].id"/>
+                          <arg label="m.coach.team.id" value="this[0].coach.team.id"/>
+                          <arg label="m.coach.position.id" value="this[0].coach.position.id"/>
+                          <arg label="m.coach.id" value="this[0].coach.id"/>
+                          <arg label="m.coach" value="this[0].coach"/>
+                          <arg label="m.coach.img" value="this[0].coach.img"/>
+                          <arg label="m.coach.name" value="this[0].coach.name"/>
+                          <arg label="m.coach.oldPrice" value="this[0].coach.oldPrice"/>
+                          <arg label="m.coach.position" value="this[0].coach.position"/>
+                          <arg label="m.coach.position.name" value="this[0].coach.position.name"/>
+                          <arg label="m.coach.price" value="this[0].coach.price"/>
+                          <arg label="m.coach.team" value="this[0].coach.team"/>
+                          <arg label="m.coach.team.logo" value="this[0].coach.team.logo"/>
+                          <arg label="m.coach.team.name" value="this[0].coach.team.name"/>
+                          <arg label="m.coach.totalGamesPlayed" value="this[0].coach.totalGamesPlayed"/>
+                          <arg label="m.ownerName" value="this[0].ownerName"/>
+                          <arg label="m.player1" value="this[0].player1"/>
+                          <arg label="m.player1.img" value="this[0].player1.img"/>
+                          <arg label="m.player1.name" value="this[0].player1.name"/>
+                          <arg label="m.player1.oldPrice" value="this[0].player1.oldPrice"/>
+                          <arg label="m.player1.position" value="this[0].player1.position"/>
+                          <arg label="m.player1.position.name" value="this[0].player1.position.name"/>
+                          <arg label="m.player1.price" value="this[0].player1.price"/>
+                          <arg label="m.player1.team" value="this[0].player1.team"/>
+                          <arg label="m.player1.team.logo" value="this[0].player1.team.logo"/>
+                          <arg label="m.player11.team.id" value="this[0].player11.team.id"/>
+                          <arg label="m.player11.position.id" value="this[0].player11.position.id"/>
+                          <arg label="m.player11.id" value="this[0].player11.id"/>
+                          <arg label="m.player10.team.id" value="this[0].player10.team.id"/>
+                          <arg label="m.player10.position.id" value="this[0].player10.position.id"/>
+                          <arg label="m.player10.id" value="this[0].player10.id"/>
+                          <arg label="m.player1.team.name" value="this[0].player1.team.name"/>
+                          <arg label="m.player1.totalGamesPlayed" value="this[0].player1.totalGamesPlayed"/>
+                          <arg label="m.player10" value="this[0].player10"/>
+                          <arg label="m.player10.img" value="this[0].player10.img"/>
+                          <arg label="m.player10.name" value="this[0].player10.name"/>
+                          <arg label="m.player10.oldPrice" value="this[0].player10.oldPrice"/>
+                          <arg label="m.player10.position" value="this[0].player10.position"/>
+                          <arg label="m.player10.position.name" value="this[0].player10.position.name"/>
+                          <arg label="m.player10.price" value="this[0].player10.price"/>
+                          <arg label="m.player10.team" value="this[0].player10.team"/>
+                          <arg label="m.player10.team.logo" value="this[0].player10.team.logo"/>
+                          <arg label="m.player10.team.name" value="this[0].player10.team.name"/>
+                          <arg label="m.player10.totalGamesPlayed" value="this[0].player10.totalGamesPlayed"/>
+                          <arg label="m.player11" value="this[0].player11"/>
+                          <arg label="m.player11.img" value="this[0].player11.img"/>
+                          <arg label="m.player11.name" value="this[0].player11.name"/>
+                          <arg label="m.player11.oldPrice" value="this[0].player11.oldPrice"/>
+                          <arg label="m.player11.position" value="this[0].player11.position"/>
+                          <arg label="m.player11.position.name" value="this[0].player11.position.name"/>
+                          <arg label="m.player11.price" value="this[0].player11.price"/>
+                          <arg label="m.player11.team" value="this[0].player11.team"/>
+                          <arg label="m.player11.team.logo" value="this[0].player11.team.logo"/>
+                          <arg label="m.player11.team.name" value="this[0].player11.team.name"/>
+                          <arg label="m.player3.team.id" value="this[0].player3.team.id"/>
+                          <arg label="m.player3.position.id" value="this[0].player3.position.id"/>
+                          <arg label="m.player3.id" value="this[0].player3.id"/>
+                          <arg label="m.player2.team.id" value="this[0].player2.team.id"/>
+                          <arg label="m.player2.position.id" value="this[0].player2.position.id"/>
+                          <arg label="m.player2.id" value="this[0].player2.id"/>
+                          <arg label="m.player11.totalGamesPlayed" value="this[0].player11.totalGamesPlayed"/>
+                          <arg label="m.player2" value="this[0].player2"/>
+                          <arg label="m.player2.img" value="this[0].player2.img"/>
+                          <arg label="m.player2.name" value="this[0].player2.name"/>
+                          <arg label="m.player2.oldPrice" value="this[0].player2.oldPrice"/>
+                          <arg label="m.player2.position" value="this[0].player2.position"/>
+                          <arg label="m.player2.position.name" value="this[0].player2.position.name"/>
+                          <arg label="m.player2.price" value="this[0].player2.price"/>
+                          <arg label="m.player2.team" value="this[0].player2.team"/>
+                          <arg label="m.player2.team.logo" value="this[0].player2.team.logo"/>
+                          <arg label="m.player2.team.name" value="this[0].player2.team.name"/>
+                          <arg label="m.player2.totalGamesPlayed" value="this[0].player2.totalGamesPlayed"/>
+                          <arg label="m.player3" value="this[0].player3"/>
+                          <arg label="m.player3.img" value="this[0].player3.img"/>
+                          <arg label="m.player3.name" value="this[0].player3.name"/>
+                          <arg label="m.player3.oldPrice" value="this[0].player3.oldPrice"/>
+                          <arg label="m.player3.position" value="this[0].player3.position"/>
+                          <arg label="m.player3.position.name" value="this[0].player3.position.name"/>
+                          <arg label="m.player3.price" value="this[0].player3.price"/>
+                          <arg label="m.player3.team" value="this[0].player3.team"/>
+                          <arg label="m.player3.team.logo" value="this[0].player3.team.logo"/>
+                          <arg label="m.player3.team.name" value="this[0].player3.team.name"/>
+                          <arg label="m.player3.totalGamesPlayed" value="this[0].player3.totalGamesPlayed"/>
+                          <arg label="m.player5.team.id" value="this[0].player5.team.id"/>
+                          <arg label="m.player5.position.id" value="this[0].player5.position.id"/>
+                          <arg label="m.player5.id" value="this[0].player5.id"/>
+                          <arg label="m.player4.team.id" value="this[0].player4.team.id"/>
+                          <arg label="m.player4.position.id" value="this[0].player4.position.id"/>
+                          <arg label="m.player4.id" value="this[0].player4.id"/>
+                          <arg label="m.player4" value="this[0].player4"/>
+                          <arg label="m.player4.img" value="this[0].player4.img"/>
+                          <arg label="m.player4.name" value="this[0].player4.name"/>
+                          <arg label="m.player4.oldPrice" value="this[0].player4.oldPrice"/>
+                          <arg label="m.player4.position" value="this[0].player4.position"/>
+                          <arg label="m.player4.position.name" value="this[0].player4.position.name"/>
+                          <arg label="m.player4.price" value="this[0].player4.price"/>
+                          <arg label="m.player4.team" value="this[0].player4.team"/>
+                          <arg label="m.player4.team.logo" value="this[0].player4.team.logo"/>
+                          <arg label="m.player4.team.name" value="this[0].player4.team.name"/>
+                          <arg label="m.player4.totalGamesPlayed" value="this[0].player4.totalGamesPlayed"/>
+                          <arg label="m.player5" value="this[0].player5"/>
+                          <arg label="m.player5.img" value="this[0].player5.img"/>
+                          <arg label="m.player5.name" value="this[0].player5.name"/>
+                          <arg label="m.player5.oldPrice" value="this[0].player5.oldPrice"/>
+                          <arg label="m.player5.position" value="this[0].player5.position"/>
+                          <arg label="m.player5.position.name" value="this[0].player5.position.name"/>
+                          <arg label="m.player5.price" value="this[0].player5.price"/>
+                          <arg label="m.player5.team" value="this[0].player5.team"/>
+                          <arg label="m.player5.team.logo" value="this[0].player5.team.logo"/>
+                          <arg label="m.player5.team.name" value="this[0].player5.team.name"/>
+                          <arg label="m.player5.totalGamesPlayed" value="this[0].player5.totalGamesPlayed"/>
+                          <arg label="m.player6" value="this[0].player6"/>
+                          <arg label="m.player8.id" value="this[0].player8.id"/>
+                          <arg label="m.player7.team.id" value="this[0].player7.team.id"/>
+                          <arg label="m.player7.position.id" value="this[0].player7.position.id"/>
+                          <arg label="m.player7.id" value="this[0].player7.id"/>
+                          <arg label="m.player6.team.id" value="this[0].player6.team.id"/>
+                          <arg label="m.player6.position.id" value="this[0].player6.position.id"/>
+                          <arg label="m.player6.id" value="this[0].player6.id"/>
+                          <arg label="m.player6.img" value="this[0].player6.img"/>
+                          <arg label="m.player6.name" value="this[0].player6.name"/>
+                          <arg label="m.player6.oldPrice" value="this[0].player6.oldPrice"/>
+                          <arg label="m.player6.position" value="this[0].player6.position"/>
+                          <arg label="m.player6.position.name" value="this[0].player6.position.name"/>
+                          <arg label="m.player6.price" value="this[0].player6.price"/>
+                          <arg label="m.player6.team" value="this[0].player6.team"/>
+                          <arg label="m.player6.team.logo" value="this[0].player6.team.logo"/>
+                          <arg label="m.player6.team.name" value="this[0].player6.team.name"/>
+                          <arg label="m.player6.totalGamesPlayed" value="this[0].player6.totalGamesPlayed"/>
+                          <arg label="m.player7" value="this[0].player7"/>
+                          <arg label="m.player7.img" value="this[0].player7.img"/>
+                          <arg label="m.player7.name" value="this[0].player7.name"/>
+                          <arg label="m.player7.oldPrice" value="this[0].player7.oldPrice"/>
+                          <arg label="m.player7.position" value="this[0].player7.position"/>
+                          <arg label="m.player7.position.name" value="this[0].player7.position.name"/>
+                          <arg label="m.player7.price" value="this[0].player7.price"/>
+                          <arg label="m.player7.team" value="this[0].player7.team"/>
+                          <arg label="m.player7.team.logo" value="this[0].player7.team.logo"/>
+                          <arg label="m.player7.team.name" value="this[0].player7.team.name"/>
+                          <arg label="m.player7.totalGamesPlayed" value="this[0].player7.totalGamesPlayed"/>
+                          <arg label="m.player8" value="this[0].player8"/>
+                          <arg label="m.playerReserve1.id" value="this[0].playerReserve1.id"/>
+                          <arg label="m.player9.team.id" value="this[0].player9.team.id"/>
+                          <arg label="m.player9.position.id" value="this[0].player9.position.id"/>
+                          <arg label="m.player9.id" value="this[0].player9.id"/>
+                          <arg label="m.player8.team.id" value="this[0].player8.team.id"/>
+                          <arg label="m.player8.position.id" value="this[0].player8.position.id"/>
+                          <arg label="m.player8.img" value="this[0].player8.img"/>
+                          <arg label="m.player8.name" value="this[0].player8.name"/>
+                          <arg label="m.player8.oldPrice" value="this[0].player8.oldPrice"/>
+                          <arg label="m.player8.position" value="this[0].player8.position"/>
+                          <arg label="m.player8.position.name" value="this[0].player8.position.name"/>
+                          <arg label="m.player8.price" value="this[0].player8.price"/>
+                          <arg label="m.player8.team" value="this[0].player8.team"/>
+                          <arg label="m.player8.team.logo" value="this[0].player8.team.logo"/>
+                          <arg label="m.player8.team.name" value="this[0].player8.team.name"/>
+                          <arg label="m.player8.totalGamesPlayed" value="this[0].player8.totalGamesPlayed"/>
+                          <arg label="m.player9" value="this[0].player9"/>
+                          <arg label="m.player9.img" value="this[0].player9.img"/>
+                          <arg label="m.player9.name" value="this[0].player9.name"/>
+                          <arg label="m.player9.oldPrice" value="this[0].player9.oldPrice"/>
+                          <arg label="m.player9.position" value="this[0].player9.position"/>
+                          <arg label="m.player9.position.name" value="this[0].player9.position.name"/>
+                          <arg label="m.player9.price" value="this[0].player9.price"/>
+                          <arg label="m.player9.team" value="this[0].player9.team"/>
+                          <arg label="m.player9.team.logo" value="this[0].player9.team.logo"/>
+                          <arg label="m.player9.team.name" value="this[0].player9.team.name"/>
+                          <arg label="m.player9.totalGamesPlayed" value="this[0].player9.totalGamesPlayed"/>
+                          <arg label="m.playerReserve1" value="this[0].playerReserve1"/>
+                          <arg label="m.playerReserve1.img" value="this[0].playerReserve1.img"/>
+                          <arg label="m.playerReserve3.id" value="this[0].playerReserve3.id"/>
+                          <arg label="m.playerReserve2.team.id" value="this[0].playerReserve2.team.id"/>
+                          <arg label="m.playerReserve2.position.id" value="this[0].playerReserve2.position.id"/>
+                          <arg label="m.playerReserve2.id" value="this[0].playerReserve2.id"/>
+                          <arg label="m.playerReserve1.team.id" value="this[0].playerReserve1.team.id"/>
+                          <arg label="m.playerReserve1.position.id" value="this[0].playerReserve1.position.id"/>
+                          <arg label="m.playerReserve1.name" value="this[0].playerReserve1.name"/>
+                          <arg label="m.playerReserve1.oldPrice" value="this[0].playerReserve1.oldPrice"/>
+                          <arg label="m.playerReserve1.position" value="this[0].playerReserve1.position"/>
+                          <arg label="m.playerReserve1.position.name" value="this[0].playerReserve1.position.name"/>
+                          <arg label="m.playerReserve1.price" value="this[0].playerReserve1.price"/>
+                          <arg label="m.playerReserve1.team" value="this[0].playerReserve1.team"/>
+                          <arg label="m.playerReserve1.team.logo" value="this[0].playerReserve1.team.logo"/>
+                          <arg label="m.playerReserve1.team.name" value="this[0].playerReserve1.team.name"/>
+                          <arg label="m.playerReserve1.totalGamesPlayed" value="this[0].playerReserve1.totalGamesPlayed"/>
+                          <arg label="m.playerReserve2" value="this[0].playerReserve2"/>
+                          <arg label="m.playerReserve2.img" value="this[0].playerReserve2.img"/>
+                          <arg label="m.playerReserve2.name" value="this[0].playerReserve2.name"/>
+                          <arg label="m.playerReserve2.oldPrice" value="this[0].playerReserve2.oldPrice"/>
+                          <arg label="m.playerReserve2.position" value="this[0].playerReserve2.position"/>
+                          <arg label="m.playerReserve2.position.name" value="this[0].playerReserve2.position.name"/>
+                          <arg label="m.playerReserve2.price" value="this[0].playerReserve2.price"/>
+                          <arg label="m.playerReserve2.team" value="this[0].playerReserve2.team"/>
+                          <arg label="m.playerReserve2.team.logo" value="this[0].playerReserve2.team.logo"/>
+                          <arg label="m.playerReserve2.team.name" value="this[0].playerReserve2.team.name"/>
+                          <arg label="m.playerReserve2.totalGamesPlayed" value="this[0].playerReserve2.totalGamesPlayed"/>
+                          <arg label="m.playerReserve3" value="this[0].playerReserve3"/>
+                          <arg label="m.playerReserve3.img" value="this[0].playerReserve3.img"/>
+                          <arg label="m.playerReserve3.name" value="this[0].playerReserve3.name"/>
+                          <arg label="m.playerReserve4.team.id" value="this[0].playerReserve4.team.id"/>
+                          <arg label="m.playerReserve4.position.id" value="this[0].playerReserve4.position.id"/>
+                          <arg label="m.playerReserve4.id" value="this[0].playerReserve4.id"/>
+                          <arg label="m.playerReserve3.team.id" value="this[0].playerReserve3.team.id"/>
+                          <arg label="m.playerReserve3.position.id" value="this[0].playerReserve3.position.id"/>
+                          <arg label="m.playerReserve3.oldPrice" value="this[0].playerReserve3.oldPrice"/>
+                          <arg label="m.playerReserve3.position" value="this[0].playerReserve3.position"/>
+                          <arg label="m.playerReserve3.position.name" value="this[0].playerReserve3.position.name"/>
+                          <arg label="m.playerReserve3.price" value="this[0].playerReserve3.price"/>
+                          <arg label="m.playerReserve3.team" value="this[0].playerReserve3.team"/>
+                          <arg label="m.playerReserve3.team.logo" value="this[0].playerReserve3.team.logo"/>
+                          <arg label="m.playerReserve3.team.name" value="this[0].playerReserve3.team.name"/>
+                          <arg label="m.playerReserve3.totalGamesPlayed" value="this[0].playerReserve3.totalGamesPlayed"/>
+                          <arg label="m.playerReserve4" value="this[0].playerReserve4"/>
+                          <arg label="m.playerReserve4.img" value="this[0].playerReserve4.img"/>
+                          <arg label="m.playerReserve4.name" value="this[0].playerReserve4.name"/>
+                          <arg label="m.playerReserve4.oldPrice" value="this[0].playerReserve4.oldPrice"/>
+                          <arg label="m.playerReserve4.position" value="this[0].playerReserve4.position"/>
+                          <arg label="m.playerReserve4.position.name" value="this[0].playerReserve4.position.name"/>
+                          <arg label="m.playerReserve4.price" value="this[0].playerReserve4.price"/>
+                          <arg label="m.playerReserve4.team" value="this[0].playerReserve4.team"/>
+                          <arg label="m.playerReserve4.team.logo" value="this[0].playerReserve4.team.logo"/>
+                          <arg label="m.playerReserve4.team.name" value="this[0].playerReserve4.team.name"/>
+                          <arg label="m.playerReserve4.totalGamesPlayed" value="this[0].playerReserve4.totalGamesPlayed"/>
+                          <arg label="m.tacticalScheme" value="this[0].tacticalScheme"/>
+                          <arg label="m.teamName" value="this[0].teamName"/>
+                          <arg label="m.userId" value="this[0].userId"/>
+                        </mutation>
+                        <field customattributes="" name="SELECT">this[0].teamName</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <value name="ARG2">
+                  <block asynccall="false" colour="#934848" dependencyby="Anb:u5+^,0vLkL9QIqn5" id=".T5s[{F;(b+x,cMU=^M-" origintype="util_dropdown" output="true" type="util_dropdown">
+                    <mutation>
+                      <arg name="false" value="Falso"/>
+                      <arg name="true" value="Verdadeiro"/>
+                    </mutation>
+                    <field customattributes="" name="SELECT">false</field>
+                  </block>
+                </value>
+                <next>
+                  <block asynccall="false" colour="#934848" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="hEkxxulYs5Oe^lU]8:MZ" multilayer="true" namespace="cronapi.screen.changeContent" origintype="procedures_callnoreturn" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EModificar%20conte%C3%BAdo%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20altera%20o%20conte%C3%BAdo%20pelo%20id,%20por%20exemplo,%20o%20conte%C3%BAdo%20de%20um%20r%C3%B3tulo%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Obter%20identificador%20:%20Objeto%3C/span%3E%3Cdiv%3E%20Identificador%20(id)%20a%20ser%20obtido%20do%20Formul%C3%A1rio%20selecionado%3C/div%3E%3Cspan%3E%20-%20Conte%C3%BAdo%20:%20Texto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Compilar?%20:%20L%C3%B3gico%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22http://localhost:80/help?type=blockly&amp;amp;id=cronapi.screen.changeContent%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callnoreturn">
+                    <mutation name="{{cronapi.screen.changeContent}}" return-raw-type="undefined">
+                      <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.OBJECT" name="Obter identificador"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STRING" name="Conteúdo"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.BOOLEAN" name="Compilar?"/>
+                    </mutation>
+                    <value name="ARG0">
+                      <block asynccall="false" colour="#934848" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="EO?jO({Eg.0Jx}:2f8{N" origintype="ids_from_screen" output="true" type="ids_from_screen">
+                        <field customattributes="" name="SELECT">ownerName</field>
+                      </block>
+                    </value>
+                    <value name="ARG1">
+                      <shadow asynccall="false" colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="O#voGy:5_W2P1tC?9wyT" origintype="text" output="true" tooltip="function () { [native code] }" type="text" xmlns="">
+                        <field customattributes="" name="TEXT"/>
+                      </shadow>
+                      <block asynccall="false" colour="#aa2f00" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="R?Z.6S*T%QJvZQzP({jn" multilayer="false" namespace="cronapi.database.Operations.getField" origintype="procedures_get_field" output="true" returntype="ObjectType.OBJECT" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EObter%20campo%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20para%20obter%20campo%20do%20registro%20do%20cursor%20atual%20da%20fonte%20de%20dados%20%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Fonte%20de%20dados%20:%20Objeto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Nome%20do%20campo%20:%20Texto%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Objeto%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22http://localhost:80/help?type=blockly&amp;amp;id=cronapi.database.Operations.getField%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_get_field">
+                        <mutation name="{{cronapi.database.Operations.getField}}">
+                          <arg name="Fonte de dados"/>
+                          <arg name="Nome do campo"/>
+                        </mutation>
+                        <value name="PARAM0">
+                          <block asynccall="false" colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="r|-LeQ+pEzm^`My!R#|2" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                            <field customattributes="" name="VAR">myTeam</field>
+                          </block>
+                        </value>
+                        <value name="PARAM1">
+                          <block asynccall="false" colour="#db802b" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="}0qvhB5[TAp;Le0iG%R!" origintype="procedures_get_field_datasource" output="true" type="procedures_get_field_datasource">
+                            <mutation name="">
+                              <arg label="m" value="this[0]"/>
+                              <arg label="m.player1.team.id" value="this[0].player1.team.id"/>
+                              <arg label="m.player1.position.id" value="this[0].player1.position.id"/>
+                              <arg label="m.player1.id" value="this[0].player1.id"/>
+                              <arg label="m.id" value="this[0].id"/>
+                              <arg label="m.coach.team.id" value="this[0].coach.team.id"/>
+                              <arg label="m.coach.position.id" value="this[0].coach.position.id"/>
+                              <arg label="m.coach.id" value="this[0].coach.id"/>
+                              <arg label="m.coach" value="this[0].coach"/>
+                              <arg label="m.coach.img" value="this[0].coach.img"/>
+                              <arg label="m.coach.name" value="this[0].coach.name"/>
+                              <arg label="m.coach.oldPrice" value="this[0].coach.oldPrice"/>
+                              <arg label="m.coach.position" value="this[0].coach.position"/>
+                              <arg label="m.coach.position.name" value="this[0].coach.position.name"/>
+                              <arg label="m.coach.price" value="this[0].coach.price"/>
+                              <arg label="m.coach.team" value="this[0].coach.team"/>
+                              <arg label="m.coach.team.logo" value="this[0].coach.team.logo"/>
+                              <arg label="m.coach.team.name" value="this[0].coach.team.name"/>
+                              <arg label="m.coach.totalGamesPlayed" value="this[0].coach.totalGamesPlayed"/>
+                              <arg label="m.ownerName" value="this[0].ownerName"/>
+                              <arg label="m.player1" value="this[0].player1"/>
+                              <arg label="m.player1.img" value="this[0].player1.img"/>
+                              <arg label="m.player1.name" value="this[0].player1.name"/>
+                              <arg label="m.player1.oldPrice" value="this[0].player1.oldPrice"/>
+                              <arg label="m.player1.position" value="this[0].player1.position"/>
+                              <arg label="m.player1.position.name" value="this[0].player1.position.name"/>
+                              <arg label="m.player1.price" value="this[0].player1.price"/>
+                              <arg label="m.player1.team" value="this[0].player1.team"/>
+                              <arg label="m.player1.team.logo" value="this[0].player1.team.logo"/>
+                              <arg label="m.player11.team.id" value="this[0].player11.team.id"/>
+                              <arg label="m.player11.position.id" value="this[0].player11.position.id"/>
+                              <arg label="m.player11.id" value="this[0].player11.id"/>
+                              <arg label="m.player10.team.id" value="this[0].player10.team.id"/>
+                              <arg label="m.player10.position.id" value="this[0].player10.position.id"/>
+                              <arg label="m.player10.id" value="this[0].player10.id"/>
+                              <arg label="m.player1.team.name" value="this[0].player1.team.name"/>
+                              <arg label="m.player1.totalGamesPlayed" value="this[0].player1.totalGamesPlayed"/>
+                              <arg label="m.player10" value="this[0].player10"/>
+                              <arg label="m.player10.img" value="this[0].player10.img"/>
+                              <arg label="m.player10.name" value="this[0].player10.name"/>
+                              <arg label="m.player10.oldPrice" value="this[0].player10.oldPrice"/>
+                              <arg label="m.player10.position" value="this[0].player10.position"/>
+                              <arg label="m.player10.position.name" value="this[0].player10.position.name"/>
+                              <arg label="m.player10.price" value="this[0].player10.price"/>
+                              <arg label="m.player10.team" value="this[0].player10.team"/>
+                              <arg label="m.player10.team.logo" value="this[0].player10.team.logo"/>
+                              <arg label="m.player10.team.name" value="this[0].player10.team.name"/>
+                              <arg label="m.player10.totalGamesPlayed" value="this[0].player10.totalGamesPlayed"/>
+                              <arg label="m.player11" value="this[0].player11"/>
+                              <arg label="m.player11.img" value="this[0].player11.img"/>
+                              <arg label="m.player11.name" value="this[0].player11.name"/>
+                              <arg label="m.player11.oldPrice" value="this[0].player11.oldPrice"/>
+                              <arg label="m.player11.position" value="this[0].player11.position"/>
+                              <arg label="m.player11.position.name" value="this[0].player11.position.name"/>
+                              <arg label="m.player11.price" value="this[0].player11.price"/>
+                              <arg label="m.player11.team" value="this[0].player11.team"/>
+                              <arg label="m.player11.team.logo" value="this[0].player11.team.logo"/>
+                              <arg label="m.player11.team.name" value="this[0].player11.team.name"/>
+                              <arg label="m.player3.team.id" value="this[0].player3.team.id"/>
+                              <arg label="m.player3.position.id" value="this[0].player3.position.id"/>
+                              <arg label="m.player3.id" value="this[0].player3.id"/>
+                              <arg label="m.player2.team.id" value="this[0].player2.team.id"/>
+                              <arg label="m.player2.position.id" value="this[0].player2.position.id"/>
+                              <arg label="m.player2.id" value="this[0].player2.id"/>
+                              <arg label="m.player11.totalGamesPlayed" value="this[0].player11.totalGamesPlayed"/>
+                              <arg label="m.player2" value="this[0].player2"/>
+                              <arg label="m.player2.img" value="this[0].player2.img"/>
+                              <arg label="m.player2.name" value="this[0].player2.name"/>
+                              <arg label="m.player2.oldPrice" value="this[0].player2.oldPrice"/>
+                              <arg label="m.player2.position" value="this[0].player2.position"/>
+                              <arg label="m.player2.position.name" value="this[0].player2.position.name"/>
+                              <arg label="m.player2.price" value="this[0].player2.price"/>
+                              <arg label="m.player2.team" value="this[0].player2.team"/>
+                              <arg label="m.player2.team.logo" value="this[0].player2.team.logo"/>
+                              <arg label="m.player2.team.name" value="this[0].player2.team.name"/>
+                              <arg label="m.player2.totalGamesPlayed" value="this[0].player2.totalGamesPlayed"/>
+                              <arg label="m.player3" value="this[0].player3"/>
+                              <arg label="m.player3.img" value="this[0].player3.img"/>
+                              <arg label="m.player3.name" value="this[0].player3.name"/>
+                              <arg label="m.player3.oldPrice" value="this[0].player3.oldPrice"/>
+                              <arg label="m.player3.position" value="this[0].player3.position"/>
+                              <arg label="m.player3.position.name" value="this[0].player3.position.name"/>
+                              <arg label="m.player3.price" value="this[0].player3.price"/>
+                              <arg label="m.player3.team" value="this[0].player3.team"/>
+                              <arg label="m.player3.team.logo" value="this[0].player3.team.logo"/>
+                              <arg label="m.player3.team.name" value="this[0].player3.team.name"/>
+                              <arg label="m.player3.totalGamesPlayed" value="this[0].player3.totalGamesPlayed"/>
+                              <arg label="m.player5.team.id" value="this[0].player5.team.id"/>
+                              <arg label="m.player5.position.id" value="this[0].player5.position.id"/>
+                              <arg label="m.player5.id" value="this[0].player5.id"/>
+                              <arg label="m.player4.team.id" value="this[0].player4.team.id"/>
+                              <arg label="m.player4.position.id" value="this[0].player4.position.id"/>
+                              <arg label="m.player4.id" value="this[0].player4.id"/>
+                              <arg label="m.player4" value="this[0].player4"/>
+                              <arg label="m.player4.img" value="this[0].player4.img"/>
+                              <arg label="m.player4.name" value="this[0].player4.name"/>
+                              <arg label="m.player4.oldPrice" value="this[0].player4.oldPrice"/>
+                              <arg label="m.player4.position" value="this[0].player4.position"/>
+                              <arg label="m.player4.position.name" value="this[0].player4.position.name"/>
+                              <arg label="m.player4.price" value="this[0].player4.price"/>
+                              <arg label="m.player4.team" value="this[0].player4.team"/>
+                              <arg label="m.player4.team.logo" value="this[0].player4.team.logo"/>
+                              <arg label="m.player4.team.name" value="this[0].player4.team.name"/>
+                              <arg label="m.player4.totalGamesPlayed" value="this[0].player4.totalGamesPlayed"/>
+                              <arg label="m.player5" value="this[0].player5"/>
+                              <arg label="m.player5.img" value="this[0].player5.img"/>
+                              <arg label="m.player5.name" value="this[0].player5.name"/>
+                              <arg label="m.player5.oldPrice" value="this[0].player5.oldPrice"/>
+                              <arg label="m.player5.position" value="this[0].player5.position"/>
+                              <arg label="m.player5.position.name" value="this[0].player5.position.name"/>
+                              <arg label="m.player5.price" value="this[0].player5.price"/>
+                              <arg label="m.player5.team" value="this[0].player5.team"/>
+                              <arg label="m.player5.team.logo" value="this[0].player5.team.logo"/>
+                              <arg label="m.player5.team.name" value="this[0].player5.team.name"/>
+                              <arg label="m.player5.totalGamesPlayed" value="this[0].player5.totalGamesPlayed"/>
+                              <arg label="m.player6" value="this[0].player6"/>
+                              <arg label="m.player8.id" value="this[0].player8.id"/>
+                              <arg label="m.player7.team.id" value="this[0].player7.team.id"/>
+                              <arg label="m.player7.position.id" value="this[0].player7.position.id"/>
+                              <arg label="m.player7.id" value="this[0].player7.id"/>
+                              <arg label="m.player6.team.id" value="this[0].player6.team.id"/>
+                              <arg label="m.player6.position.id" value="this[0].player6.position.id"/>
+                              <arg label="m.player6.id" value="this[0].player6.id"/>
+                              <arg label="m.player6.img" value="this[0].player6.img"/>
+                              <arg label="m.player6.name" value="this[0].player6.name"/>
+                              <arg label="m.player6.oldPrice" value="this[0].player6.oldPrice"/>
+                              <arg label="m.player6.position" value="this[0].player6.position"/>
+                              <arg label="m.player6.position.name" value="this[0].player6.position.name"/>
+                              <arg label="m.player6.price" value="this[0].player6.price"/>
+                              <arg label="m.player6.team" value="this[0].player6.team"/>
+                              <arg label="m.player6.team.logo" value="this[0].player6.team.logo"/>
+                              <arg label="m.player6.team.name" value="this[0].player6.team.name"/>
+                              <arg label="m.player6.totalGamesPlayed" value="this[0].player6.totalGamesPlayed"/>
+                              <arg label="m.player7" value="this[0].player7"/>
+                              <arg label="m.player7.img" value="this[0].player7.img"/>
+                              <arg label="m.player7.name" value="this[0].player7.name"/>
+                              <arg label="m.player7.oldPrice" value="this[0].player7.oldPrice"/>
+                              <arg label="m.player7.position" value="this[0].player7.position"/>
+                              <arg label="m.player7.position.name" value="this[0].player7.position.name"/>
+                              <arg label="m.player7.price" value="this[0].player7.price"/>
+                              <arg label="m.player7.team" value="this[0].player7.team"/>
+                              <arg label="m.player7.team.logo" value="this[0].player7.team.logo"/>
+                              <arg label="m.player7.team.name" value="this[0].player7.team.name"/>
+                              <arg label="m.player7.totalGamesPlayed" value="this[0].player7.totalGamesPlayed"/>
+                              <arg label="m.player8" value="this[0].player8"/>
+                              <arg label="m.playerReserve1.id" value="this[0].playerReserve1.id"/>
+                              <arg label="m.player9.team.id" value="this[0].player9.team.id"/>
+                              <arg label="m.player9.position.id" value="this[0].player9.position.id"/>
+                              <arg label="m.player9.id" value="this[0].player9.id"/>
+                              <arg label="m.player8.team.id" value="this[0].player8.team.id"/>
+                              <arg label="m.player8.position.id" value="this[0].player8.position.id"/>
+                              <arg label="m.player8.img" value="this[0].player8.img"/>
+                              <arg label="m.player8.name" value="this[0].player8.name"/>
+                              <arg label="m.player8.oldPrice" value="this[0].player8.oldPrice"/>
+                              <arg label="m.player8.position" value="this[0].player8.position"/>
+                              <arg label="m.player8.position.name" value="this[0].player8.position.name"/>
+                              <arg label="m.player8.price" value="this[0].player8.price"/>
+                              <arg label="m.player8.team" value="this[0].player8.team"/>
+                              <arg label="m.player8.team.logo" value="this[0].player8.team.logo"/>
+                              <arg label="m.player8.team.name" value="this[0].player8.team.name"/>
+                              <arg label="m.player8.totalGamesPlayed" value="this[0].player8.totalGamesPlayed"/>
+                              <arg label="m.player9" value="this[0].player9"/>
+                              <arg label="m.player9.img" value="this[0].player9.img"/>
+                              <arg label="m.player9.name" value="this[0].player9.name"/>
+                              <arg label="m.player9.oldPrice" value="this[0].player9.oldPrice"/>
+                              <arg label="m.player9.position" value="this[0].player9.position"/>
+                              <arg label="m.player9.position.name" value="this[0].player9.position.name"/>
+                              <arg label="m.player9.price" value="this[0].player9.price"/>
+                              <arg label="m.player9.team" value="this[0].player9.team"/>
+                              <arg label="m.player9.team.logo" value="this[0].player9.team.logo"/>
+                              <arg label="m.player9.team.name" value="this[0].player9.team.name"/>
+                              <arg label="m.player9.totalGamesPlayed" value="this[0].player9.totalGamesPlayed"/>
+                              <arg label="m.playerReserve1" value="this[0].playerReserve1"/>
+                              <arg label="m.playerReserve1.img" value="this[0].playerReserve1.img"/>
+                              <arg label="m.playerReserve3.id" value="this[0].playerReserve3.id"/>
+                              <arg label="m.playerReserve2.team.id" value="this[0].playerReserve2.team.id"/>
+                              <arg label="m.playerReserve2.position.id" value="this[0].playerReserve2.position.id"/>
+                              <arg label="m.playerReserve2.id" value="this[0].playerReserve2.id"/>
+                              <arg label="m.playerReserve1.team.id" value="this[0].playerReserve1.team.id"/>
+                              <arg label="m.playerReserve1.position.id" value="this[0].playerReserve1.position.id"/>
+                              <arg label="m.playerReserve1.name" value="this[0].playerReserve1.name"/>
+                              <arg label="m.playerReserve1.oldPrice" value="this[0].playerReserve1.oldPrice"/>
+                              <arg label="m.playerReserve1.position" value="this[0].playerReserve1.position"/>
+                              <arg label="m.playerReserve1.position.name" value="this[0].playerReserve1.position.name"/>
+                              <arg label="m.playerReserve1.price" value="this[0].playerReserve1.price"/>
+                              <arg label="m.playerReserve1.team" value="this[0].playerReserve1.team"/>
+                              <arg label="m.playerReserve1.team.logo" value="this[0].playerReserve1.team.logo"/>
+                              <arg label="m.playerReserve1.team.name" value="this[0].playerReserve1.team.name"/>
+                              <arg label="m.playerReserve1.totalGamesPlayed" value="this[0].playerReserve1.totalGamesPlayed"/>
+                              <arg label="m.playerReserve2" value="this[0].playerReserve2"/>
+                              <arg label="m.playerReserve2.img" value="this[0].playerReserve2.img"/>
+                              <arg label="m.playerReserve2.name" value="this[0].playerReserve2.name"/>
+                              <arg label="m.playerReserve2.oldPrice" value="this[0].playerReserve2.oldPrice"/>
+                              <arg label="m.playerReserve2.position" value="this[0].playerReserve2.position"/>
+                              <arg label="m.playerReserve2.position.name" value="this[0].playerReserve2.position.name"/>
+                              <arg label="m.playerReserve2.price" value="this[0].playerReserve2.price"/>
+                              <arg label="m.playerReserve2.team" value="this[0].playerReserve2.team"/>
+                              <arg label="m.playerReserve2.team.logo" value="this[0].playerReserve2.team.logo"/>
+                              <arg label="m.playerReserve2.team.name" value="this[0].playerReserve2.team.name"/>
+                              <arg label="m.playerReserve2.totalGamesPlayed" value="this[0].playerReserve2.totalGamesPlayed"/>
+                              <arg label="m.playerReserve3" value="this[0].playerReserve3"/>
+                              <arg label="m.playerReserve3.img" value="this[0].playerReserve3.img"/>
+                              <arg label="m.playerReserve3.name" value="this[0].playerReserve3.name"/>
+                              <arg label="m.playerReserve4.team.id" value="this[0].playerReserve4.team.id"/>
+                              <arg label="m.playerReserve4.position.id" value="this[0].playerReserve4.position.id"/>
+                              <arg label="m.playerReserve4.id" value="this[0].playerReserve4.id"/>
+                              <arg label="m.playerReserve3.team.id" value="this[0].playerReserve3.team.id"/>
+                              <arg label="m.playerReserve3.position.id" value="this[0].playerReserve3.position.id"/>
+                              <arg label="m.playerReserve3.oldPrice" value="this[0].playerReserve3.oldPrice"/>
+                              <arg label="m.playerReserve3.position" value="this[0].playerReserve3.position"/>
+                              <arg label="m.playerReserve3.position.name" value="this[0].playerReserve3.position.name"/>
+                              <arg label="m.playerReserve3.price" value="this[0].playerReserve3.price"/>
+                              <arg label="m.playerReserve3.team" value="this[0].playerReserve3.team"/>
+                              <arg label="m.playerReserve3.team.logo" value="this[0].playerReserve3.team.logo"/>
+                              <arg label="m.playerReserve3.team.name" value="this[0].playerReserve3.team.name"/>
+                              <arg label="m.playerReserve3.totalGamesPlayed" value="this[0].playerReserve3.totalGamesPlayed"/>
+                              <arg label="m.playerReserve4" value="this[0].playerReserve4"/>
+                              <arg label="m.playerReserve4.img" value="this[0].playerReserve4.img"/>
+                              <arg label="m.playerReserve4.name" value="this[0].playerReserve4.name"/>
+                              <arg label="m.playerReserve4.oldPrice" value="this[0].playerReserve4.oldPrice"/>
+                              <arg label="m.playerReserve4.position" value="this[0].playerReserve4.position"/>
+                              <arg label="m.playerReserve4.position.name" value="this[0].playerReserve4.position.name"/>
+                              <arg label="m.playerReserve4.price" value="this[0].playerReserve4.price"/>
+                              <arg label="m.playerReserve4.team" value="this[0].playerReserve4.team"/>
+                              <arg label="m.playerReserve4.team.logo" value="this[0].playerReserve4.team.logo"/>
+                              <arg label="m.playerReserve4.team.name" value="this[0].playerReserve4.team.name"/>
+                              <arg label="m.playerReserve4.totalGamesPlayed" value="this[0].playerReserve4.totalGamesPlayed"/>
+                              <arg label="m.tacticalScheme" value="this[0].tacticalScheme"/>
+                              <arg label="m.teamName" value="this[0].teamName"/>
+                              <arg label="m.userId" value="this[0].userId"/>
+                            </mutation>
+                            <field customattributes="" name="SELECT">this[0].ownerName</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="ARG2">
+                      <block asynccall="false" colour="#934848" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="z$O,6UZmBW:)g3TCt|xQ" origintype="util_dropdown" output="true" type="util_dropdown">
+                        <mutation>
+                          <arg name="false" value="Falso"/>
+                          <arg name="true" value="Verdadeiro"/>
+                        </mutation>
+                        <field customattributes="" name="SELECT">false</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block asynccall="false" colour="#934848" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="IG@bZr:{@h8_42MbS[)4" multilayer="true" namespace="cronapi.screen.changeContent" origintype="procedures_callnoreturn" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EModificar%20conte%C3%BAdo%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20altera%20o%20conte%C3%BAdo%20pelo%20id,%20por%20exemplo,%20o%20conte%C3%BAdo%20de%20um%20r%C3%B3tulo%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Obter%20identificador%20:%20Objeto%3C/span%3E%3Cdiv%3E%20Identificador%20(id)%20a%20ser%20obtido%20do%20Formul%C3%A1rio%20selecionado%3C/div%3E%3Cspan%3E%20-%20Conte%C3%BAdo%20:%20Texto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Compilar?%20:%20L%C3%B3gico%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22http://localhost:80/help?type=blockly&amp;amp;id=cronapi.screen.changeContent%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callnoreturn">
+                        <mutation name="{{cronapi.screen.changeContent}}" return-raw-type="undefined">
+                          <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.OBJECT" name="Obter identificador"/>
+                          <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STRING" name="Conteúdo"/>
+                          <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.BOOLEAN" name="Compilar?"/>
+                        </mutation>
+                        <value name="ARG0">
+                          <block asynccall="false" colour="#934848" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="!nz9OG)LP-o6N9!W:zH@" origintype="ids_from_screen" output="true" type="ids_from_screen">
+                            <field customattributes="" name="SELECT">currentRound</field>
+                          </block>
+                        </value>
+                        <value name="ARG1">
+                          <shadow asynccall="false" colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="O#voGy:5_W2P1tC?9wyT" origintype="text" output="true" tooltip="function () { [native code] }" type="text" xmlns="">
+                            <field customattributes="" name="TEXT"/>
+                          </shadow>
+                          <block asynccall="false" colour="#5ba58c" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="v]nMzR[u*02h+9zLD,Ys" origintype="text_join" output="true" tooltip="Criar um pedaço de texto juntando qualquer número de itens." type="text_join">
+                            <mutation items="5"/>
+                            <value name="ADD0">
+                              <block asynccall="false" colour="#aa2f00" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="dJ]%Vd]8yF/WRQ^zhK,J" multilayer="false" namespace="cronapi.database.Operations.getField" origintype="procedures_get_field" output="true" returntype="ObjectType.OBJECT" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EObter%20campo%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20para%20obter%20campo%20do%20registro%20do%20cursor%20atual%20da%20fonte%20de%20dados%20%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Fonte%20de%20dados%20:%20Objeto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Nome%20do%20campo%20:%20Texto%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Objeto%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22http://localhost:80/help?type=blockly&amp;amp;id=cronapi.database.Operations.getField%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_get_field">
+                                <mutation name="{{cronapi.database.Operations.getField}}">
+                                  <arg name="Fonte de dados"/>
+                                  <arg name="Nome do campo"/>
+                                </mutation>
+                                <value name="PARAM0">
+                                  <block asynccall="false" colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="V_EstAj9Ih[;58aeyXi." origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                                    <field customattributes="" name="VAR">round</field>
+                                  </block>
+                                </value>
+                                <value name="PARAM1">
+                                  <block asynccall="false" colour="#db802b" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="J3N}cld{|l)}P:!7pEGj" origintype="procedures_get_field_datasource" output="true" type="procedures_get_field_datasource">
+                                    <mutation name="">
+                                      <arg label="r" value="this[0]"/>
+                                      <arg label="r.session.id" value="this[0].session.id"/>
+                                      <arg label="r.id" value="this[0].id"/>
+                                      <arg label="r.end" value="this[0].end"/>
+                                      <arg label="r.finished" value="this[0].finished"/>
+                                      <arg label="r.number" value="this[0].number"/>
+                                      <arg label="r.session" value="this[0].session"/>
+                                      <arg label="r.session.finished" value="this[0].session.finished"/>
+                                      <arg label="r.session.year" value="this[0].session.year"/>
+                                      <arg label="r.stard" value="this[0].stard"/>
+                                    </mutation>
+                                    <field customattributes="" name="SELECT">this[0].number</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <value name="ADD1">
+                              <block asynccall="false" colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="[AVi_1Y#]^V7Rd~Ht^nW" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                                <field customattributes="" name="TEXT">ª Rodada - </field>
+                              </block>
+                            </value>
+                            <value name="ADD2">
+                              <block asynccall="false" colour="#7d9137" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="~sF8j8Ppin-OIZ?j;uw[" multilayer="false" namespace="cronapi.dateTime.Operations.formatDateTime2" origintype="procedures_callreturn" output="true" returntype="ObjectType.STRING" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EFormatar%20data%20com%20Fuso%20Hor%C3%A1rio%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20para%20formatar%20data%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Data%20:%20Data%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20M%C3%A1scara%20:%20Texto%3C/span%3E%3Cdiv%3E%20M%C3%A1scara.%20Ex:%20dd/MM/yyyy%20HH:mm:ss,%20DateTimeFormat,%20DateFormat%3C/div%3E%3Cspan%3E%20-%20Fuso%20Hor%C3%A1rio%20:%20Inteiro%3C/span%3E%3Cdiv%3E%20Fuso%20Hor%C3%A1rio.%20Ex:%20-3,%20GMT-03:00%20ou%20America/Sao_Paulo%3C/div%3E%3Cspan%3E%20-%20Usar%20idioma%20do%20cliente?%20:%20Objeto%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Texto%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22http://localhost:80/help?type=blockly&amp;amp;id=cronapi.dateTime.Operations.formatDateTime2%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callreturn">
+                                <mutation name="{{cronapi.dateTime.Operations.formatDateTime2}}" return-raw-type="cronapi.Var">
+                                  <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.DATETIME" name="Data"/>
+                                  <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.STRING" name="Máscara"/>
+                                  <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.LONG" name="Fuso Horário"/>
+                                  <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.OBJECT" name="Usar idioma do cliente?"/>
+                                </mutation>
+                                <value name="ARG0">
+                                  <block asynccall="false" colour="#aa2f00" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="%|qxJ,Y`14}xq2aPb@j*" multilayer="false" namespace="cronapi.database.Operations.getField" origintype="procedures_get_field" output="true" returntype="ObjectType.OBJECT" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EObter%20campo%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20para%20obter%20campo%20do%20registro%20do%20cursor%20atual%20da%20fonte%20de%20dados%20%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Fonte%20de%20dados%20:%20Objeto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Nome%20do%20campo%20:%20Texto%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Objeto%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22http://localhost:80/help?type=blockly&amp;amp;id=cronapi.database.Operations.getField%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_get_field">
+                                    <mutation name="{{cronapi.database.Operations.getField}}">
+                                      <arg name="Fonte de dados"/>
+                                      <arg name="Nome do campo"/>
+                                    </mutation>
+                                    <value name="PARAM0">
+                                      <block asynccall="false" colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="7p{7H:iX[N^8_Z/fbFIS" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                                        <field customattributes="" name="VAR">round</field>
+                                      </block>
+                                    </value>
+                                    <value name="PARAM1">
+                                      <block asynccall="false" colour="#db802b" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="eih6HF7+T,+TAT5bg*R}" origintype="procedures_get_field_datasource" output="true" type="procedures_get_field_datasource">
+                                        <mutation name="">
+                                          <arg label="r" value="this[0]"/>
+                                          <arg label="r.session.id" value="this[0].session.id"/>
+                                          <arg label="r.id" value="this[0].id"/>
+                                          <arg label="r.end" value="this[0].end"/>
+                                          <arg label="r.finished" value="this[0].finished"/>
+                                          <arg label="r.number" value="this[0].number"/>
+                                          <arg label="r.session" value="this[0].session"/>
+                                          <arg label="r.session.finished" value="this[0].session.finished"/>
+                                          <arg label="r.session.year" value="this[0].session.year"/>
+                                          <arg label="r.stard" value="this[0].stard"/>
+                                        </mutation>
+                                        <field customattributes="" name="SELECT">this[0].stard</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <value name="ARG1">
+                                  <shadow asynccall="false" colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="lDaB!?0ZWw::_%9O*~}/" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                                    <field customattributes="" name="TEXT">dd/MM/yyyy</field>
+                                  </shadow>
+                                </value>
+                                <value name="ARG2">
+                                  <shadow asynccall="false" colour="#5b67a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="8MB7C%QgQR}x5A`,Q8G_" origintype="math_number" output="true" tooltip="function () { [native code] }" type="math_number">
+                                    <field customattributes="" name="NUM">0</field>
+                                  </shadow>
+                                </value>
+                                <value name="ARG3">
+                                  <block asynccall="false" colour="#7d9137" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="En]{=wXpF-dfo)=Z^SOg" origintype="util_dropdown" output="true" type="util_dropdown">
+                                    <mutation>
+                                      <arg name="true" value="Sim"/>
+                                      <arg name="false" value="Não"/>
+                                    </mutation>
+                                    <field customattributes="" name="SELECT">true</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <value name="ADD3">
+                              <block asynccall="false" colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="LR4|k3]GeAA_9k/^br@;" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                                <field customattributes="" name="TEXT"> à </field>
+                              </block>
+                            </value>
+                            <value name="ADD4">
+                              <block asynccall="false" colour="#7d9137" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="rbgQFdnkK.uc%J/Ao%!x" multilayer="false" namespace="cronapi.dateTime.Operations.formatDateTime2" origintype="procedures_callreturn" output="true" returntype="ObjectType.STRING" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EFormatar%20data%20com%20Fuso%20Hor%C3%A1rio%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20para%20formatar%20data%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Data%20:%20Data%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20M%C3%A1scara%20:%20Texto%3C/span%3E%3Cdiv%3E%20M%C3%A1scara.%20Ex:%20dd/MM/yyyy%20HH:mm:ss,%20DateTimeFormat,%20DateFormat%3C/div%3E%3Cspan%3E%20-%20Fuso%20Hor%C3%A1rio%20:%20Inteiro%3C/span%3E%3Cdiv%3E%20Fuso%20Hor%C3%A1rio.%20Ex:%20-3,%20GMT-03:00%20ou%20America/Sao_Paulo%3C/div%3E%3Cspan%3E%20-%20Usar%20idioma%20do%20cliente?%20:%20Objeto%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Texto%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22http://localhost:80/help?type=blockly&amp;amp;id=cronapi.dateTime.Operations.formatDateTime2%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callreturn">
+                                <mutation name="{{cronapi.dateTime.Operations.formatDateTime2}}" return-raw-type="cronapi.Var">
+                                  <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.DATETIME" name="Data"/>
+                                  <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.STRING" name="Máscara"/>
+                                  <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.LONG" name="Fuso Horário"/>
+                                  <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.OBJECT" name="Usar idioma do cliente?"/>
+                                </mutation>
+                                <value name="ARG0">
+                                  <block asynccall="false" colour="#aa2f00" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="rlYccx,TL~U}Jl5M:]07" multilayer="false" namespace="cronapi.database.Operations.getField" origintype="procedures_get_field" output="true" returntype="ObjectType.OBJECT" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EObter%20campo%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20para%20obter%20campo%20do%20registro%20do%20cursor%20atual%20da%20fonte%20de%20dados%20%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Fonte%20de%20dados%20:%20Objeto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Nome%20do%20campo%20:%20Texto%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Objeto%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22http://localhost:80/help?type=blockly&amp;amp;id=cronapi.database.Operations.getField%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_get_field">
+                                    <mutation name="{{cronapi.database.Operations.getField}}">
+                                      <arg name="Fonte de dados"/>
+                                      <arg name="Nome do campo"/>
+                                    </mutation>
+                                    <value name="PARAM0">
+                                      <block asynccall="false" colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="*TF=Oww(-~2d^b]Flk7w" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                                        <field customattributes="" name="VAR">round</field>
+                                      </block>
+                                    </value>
+                                    <value name="PARAM1">
+                                      <block asynccall="false" colour="#db802b" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="U~I^3Hg33uu5~|g#Q}Se" origintype="procedures_get_field_datasource" output="true" type="procedures_get_field_datasource">
+                                        <mutation name="">
+                                          <arg label="r" value="this[0]"/>
+                                          <arg label="r.session.id" value="this[0].session.id"/>
+                                          <arg label="r.id" value="this[0].id"/>
+                                          <arg label="r.end" value="this[0].end"/>
+                                          <arg label="r.finished" value="this[0].finished"/>
+                                          <arg label="r.number" value="this[0].number"/>
+                                          <arg label="r.session" value="this[0].session"/>
+                                          <arg label="r.session.finished" value="this[0].session.finished"/>
+                                          <arg label="r.session.year" value="this[0].session.year"/>
+                                          <arg label="r.stard" value="this[0].stard"/>
+                                        </mutation>
+                                        <field customattributes="" name="SELECT">this[0].end</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <value name="ARG1">
+                                  <shadow asynccall="false" colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="oX2%z.BlWu~N./S?(zL/" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                                    <field customattributes="" name="TEXT">dd/MM/yyyy</field>
+                                  </shadow>
+                                </value>
+                                <value name="ARG2">
+                                  <shadow asynccall="false" colour="#5b67a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="[=E#,PEK[qWg89BTLP:l" origintype="math_number" output="true" tooltip="function () { [native code] }" type="math_number">
+                                    <field customattributes="" name="NUM">0</field>
+                                  </shadow>
+                                </value>
+                                <value name="ARG3">
+                                  <block asynccall="false" colour="#7d9137" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="]rK20uO=%yVZ|?N^ubhp" origintype="util_dropdown" output="true" type="util_dropdown">
+                                    <mutation>
+                                      <arg name="true" value="Sim"/>
+                                      <arg name="false" value="Não"/>
+                                    </mutation>
+                                    <field customattributes="" name="SELECT">true</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="ARG2">
+                          <block asynccall="false" colour="#934848" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="3hwqv,]bfo+=+5K6Zhx_" origintype="util_dropdown" output="true" type="util_dropdown">
+                            <mutation>
+                              <arg name="false" value="Falso"/>
+                              <arg name="true" value="Verdadeiro"/>
+                            </mutation>
+                            <field customattributes="" name="SELECT">false</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block asynccall="false" colour="#934848" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="--o}~U)XX}i=GL~pFWOH" multilayer="true" namespace="cronapi.screen.filter" origintype="procedures_callnoreturn" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EFiltrar%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20filtra%20uma%20Fonte%20de%20dados%20concatenando%20a%20partir%20dos%20par%C3%A2metros%20informados%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Fonte%20de%20dados%20:%20Objeto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Caminho%20:%20Texto%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22http://localhost:80/help?type=blockly&amp;amp;id=cronapi.screen.filter%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callnoreturn">
+                            <mutation name="{{cronapi.screen.filter}}" return-raw-type="undefined">
+                              <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.OBJECT" name="Fonte de dados"/>
+                              <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STRING" name="Caminho"/>
+                            </mutation>
+                            <value name="ARG0">
+                              <block asynccall="false" colour="#934848" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="JQ0|Xu|^~+,58:j$A5!u" origintype="datasource_from_screen" output="true" type="datasource_from_screen">
+                                <field customattributes="" name="SELECT">MatchsFormatedWithImages</field>
+                              </block>
+                            </value>
+                            <value name="ARG1">
+                              <shadow asynccall="false" colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="%@q`(/}ORf)ks;Ln4I)b" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                                <field customattributes="" name="TEXT"/>
+                              </shadow>
+                              <block asynccall="false" colour="#5ba58c" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="L8hNkWw;-Q{Ik~ZGU[l5" origintype="text_join" output="true" tooltip="Criar um pedaço de texto juntando qualquer número de itens." type="text_join">
+                                <mutation items="3"/>
+                                <value name="ADD0">
+                                  <block asynccall="false" colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="$^%#JRXy6p)}*6@H0::|" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                                    <field customattributes="" name="TEXT">round eq '</field>
+                                  </block>
+                                </value>
+                                <value name="ADD1">
+                                  <block asynccall="false" colour="#aa2f00" dependencyby="Anb:u5+^,0vLkL9QIqn5" id=".t+e=o21.sLxdUT}Uhqa" multilayer="false" namespace="cronapi.database.Operations.getField" origintype="procedures_get_field" output="true" returntype="ObjectType.OBJECT" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EObter%20campo%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20para%20obter%20campo%20do%20registro%20do%20cursor%20atual%20da%20fonte%20de%20dados%20%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Fonte%20de%20dados%20:%20Objeto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Nome%20do%20campo%20:%20Texto%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Objeto%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22http://localhost:80/help?type=blockly&amp;amp;id=cronapi.database.Operations.getField%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_get_field">
+                                    <mutation name="{{cronapi.database.Operations.getField}}">
+                                      <arg name="Fonte de dados"/>
+                                      <arg name="Nome do campo"/>
+                                    </mutation>
+                                    <value name="PARAM0">
+                                      <block asynccall="false" colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="VXR?%fx}ACqp8lo0C6Hr" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                                        <field customattributes="" name="VAR">round</field>
+                                      </block>
+                                    </value>
+                                    <value name="PARAM1">
+                                      <block asynccall="false" colour="#db802b" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="PQX^AZPNh(rXa47ncsE^" origintype="procedures_get_field_datasource" output="true" type="procedures_get_field_datasource">
+                                        <mutation name="">
+                                          <arg label="r" value="this[0]"/>
+                                          <arg label="r.session.id" value="this[0].session.id"/>
+                                          <arg label="r.id" value="this[0].id"/>
+                                          <arg label="r.end" value="this[0].end"/>
+                                          <arg label="r.finished" value="this[0].finished"/>
+                                          <arg label="r.number" value="this[0].number"/>
+                                          <arg label="r.session" value="this[0].session"/>
+                                          <arg label="r.session.finished" value="this[0].session.finished"/>
+                                          <arg label="r.session.year" value="this[0].session.year"/>
+                                          <arg label="r.stard" value="this[0].stard"/>
+                                        </mutation>
+                                        <field customattributes="" name="SELECT">this[0].id</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <value name="ADD2">
+                                  <block asynccall="false" colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="Z{p!^}?Wdd!9A$,q[1D{" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                                    <field customattributes="" name="TEXT">'</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block asynccall="false" colour="#5ba58c" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="sNy]Vm3~w3fr{[$}BD_l" origintype="text_print" output="false" tooltip="Imprime o texto, número ou valor especificado." type="text_print" x="-277" y="623">
+    <value name="TEXT">
+      <shadow asynccall="false" colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="8HLdLnC7s{!1iGk0Jv:_" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+        <field customattributes="" name="TEXT">abc</field>
+      </shadow>
+      <block asynccall="false" colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="k;aL:pY84He/?}8v^Tg~" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+        <field customattributes="" name="VAR">round</field>
+      </block>
+    </value>
+  </block>
+</blockly>

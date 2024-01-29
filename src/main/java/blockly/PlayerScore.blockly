@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?><blockly audit="false" blocklyType="JAVA" bpmnAble="false" formTarget="" resourceType="JAVA" ruleDescription="PlayerScore" ruleName="PlayerScore" ruleSynchronous="false" ruleTimeout="" ruleType="I" soap="false" swagger="false">
+  <metadata scale="1" scrollx="537.24375" scrolly="-105.39999999999998" target="Drx-51K%P5u.j+j$|B/!"/>
+  <block asynccall="false" colour="#fca03b" id="{a$KMCRvBI`)s6[y4Vk0" origintype="procedures_defreturn" output="false" tooltip="Cria uma função que possui um valor de retorno." type="procedures_defreturn" x="-382" y="158">
+    <mutation>
+      <arg id="f71abde5" name="PlayerScore&amp;lt;fc.entity.PlayerScore&amp;gt;"/>
+    </mutation>
+    <field customattributes="" name="NAME">AfterDelete</field>
+    <statement name="STACK">
+      <block asynccall="false" colour="#0088ee" dependencyby="{a$KMCRvBI`)s6[y4Vk0" id="LoT|CGN%h=zG54f6rDlo" origintype="variables_set" output="false" tooltip="Define esta variável para o valor da entrada." type="variables_set">
+        <field customattributes="" name="VAR">item</field>
+        <value name="VALUE">
+          <block asynccall="false" colour="#fca03b" dependencyby="{a$KMCRvBI`)s6[y4Vk0" id="+jCyy/Y}`}xM5[KctFJK" origintype="procedures_callreturn" output="true" tooltip="Executa a função definida pelo usuário &quot;CalculateCurrentPrice&quot; e usa seu retorno." type="procedures_callreturn">
+            <mutation name="CalculateCurrentPrice" return-raw-type="undefined">
+              <arg cronapi-raw-type="undefined" cronapi-type="undefined" id="9ba86fe3" name="PlayerScore&amp;lt;fc.entity.PlayerScore&amp;gt;"/>
+              <arg cronapi-raw-type="undefined" cronapi-type="undefined" id="a080c172" name="operation"/>
+            </mutation>
+            <value name="ARG0">
+              <block asynccall="false" colour="#0088ee" dependencyby="{a$KMCRvBI`)s6[y4Vk0" id="|y#v:n*DkR4N*Nuj/yDW" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                <field customattributes="" name="VAR">PlayerScore&lt;fc.entity.PlayerScore&gt;</field>
+              </block>
+            </value>
+            <value name="ARG1">
+              <block asynccall="false" colour="#5ba593" dependencyby="{a$KMCRvBI`)s6[y4Vk0" id="he+_7|r,ZI3Q,{?REa1Z" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                <field customattributes="" name="TEXT">Delete</field>
+              </block>
+            </value>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block asynccall="false" colour="#fca03b" id="Drx-51K%P5u.j+j$|B/!" origintype="procedures_defreturn" output="false" tooltip="Cria uma função que possui um valor de retorno." type="procedures_defreturn" x="-406" y="181">
+    <mutation>
+      <arg id="9ac35eca" name="PlayerScore&amp;lt;fc.entity.PlayerScore&amp;gt;"/>
+    </mutation>
+    <field customattributes="" name="NAME">AfterInsert</field>
+    <statement name="STACK">
+      <block asynccall="false" colour="#0088ee" dependencyby="Drx-51K%P5u.j+j$|B/!" id=".S*gX,LEVA[DwhrOwmQ;" origintype="variables_set" output="false" tooltip="Define esta variável para o valor da entrada." type="variables_set">
+        <field customattributes="" name="VAR">item</field>
+        <value name="VALUE">
+          <block asynccall="false" colour="#fca03b" dependencyby="Drx-51K%P5u.j+j$|B/!" id="-3Dgvt=l`~1E6Pg[OHpM" origintype="procedures_callreturn" output="true" tooltip="Executa a função definida pelo usuário &quot;CalculateCurrentPrice&quot; e usa seu retorno." type="procedures_callreturn">
+            <mutation name="CalculateCurrentPrice" return-raw-type="undefined">
+              <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="PlayerScore&lt;fc.entity.PlayerScore&gt;"/>
+              <arg cronapi-raw-type="undefined" cronapi-type="undefined" name="operation"/>
+            </mutation>
+            <value name="ARG0">
+              <block asynccall="false" colour="#0088ee" dependencyby="Drx-51K%P5u.j+j$|B/!" id="K;-9,UKDTXu/*JUXu?wq" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                <field customattributes="" name="VAR">PlayerScore&lt;fc.entity.PlayerScore&gt;</field>
+              </block>
+            </value>
+            <value name="ARG1">
+              <block asynccall="false" colour="#5ba593" dependencyby="Drx-51K%P5u.j+j$|B/!" id="}^2~f3j)#:4PfhyObfEe" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                <field customattributes="" name="TEXT">Insert</field>
+              </block>
+            </value>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block asynccall="false" colour="#995ba5" id="Anb:u5+^,0vLkL9QIqn5" origintype="procedures_defreturn" output="false" tooltip="Cria uma função que possui um valor de retorno." type="procedures_defreturn" x="-300" y="180">
+    <mutation>
+      <arg id="9ba86fe3" name="PlayerScore&amp;lt;fc.entity.PlayerScore&amp;gt;"/>
+      <arg id="a080c172" name="operation"/>
+    </mutation>
+    <field customattributes="" name="NAME">CalculateCurrentPrice</field>
+    <comment h="80" pinned="false" w="160">PlayerScore</comment>
+    <statement name="STACK">
+      <block asynccall="false" colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="JRQ.8(E6~WSl:s6]m)~E" origintype="controls_if" output="false" tooltip="function () { [native code] }" type="controls_if">
+        <mutation else="1"/>
+        <value name="IF0">
+          <block asynccall="false" colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="%B45sdK~$/}6opeV!Lo-" origintype="logic_compare" output="true" tooltip="function () { [native code] }" type="logic_compare">
+            <field customattributes="" name="OP">EQ</field>
+            <value name="A">
+              <block asynccall="false" colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="1Z*pbn%/[1%-G=bgnhH+" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                <field customattributes="" name="VAR">operation</field>
+              </block>
+            </value>
+            <value name="B">
+              <block asynccall="false" colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="bj5*GvvZxCgRO]KTrn%}" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                <field customattributes="" name="TEXT">Insert</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block asynccall="false" colour="#aa2f00" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="(-^W2BL6mZt7-k:H#D(d" multilayer="false" namespace="cronapi.database.Operations.update" origintype="procedures_sql_update_callnoreturn" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EAtualizar%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20atualiza%20um%20registro%20no%20banco%20de%20dados%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Fonte%20de%20dados%20:%20Tabela%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Entidade%20:%20Objeto%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22http://localhost:80/help?type=blockly&amp;amp;id=cronapi.database.Operations.update%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_sql_update_callnoreturn">
+            <mutation data="%7B%22queryBuilderJson%22:%7B%22isEmpty%22:true,%22isRawSql%22:true,%22sqlContent%22:%22update%20Player%20p%20set%20p.price%20=%20(p.price%20+%20:price)%20where%20p.id%20=%20:id%22,%22multiTenant%22:false,%22paginatorAutomatic%22:false,%22pagination%22:false%7D,%22entity%22:%22Player%22,%22entityFullName%22:%22fc.entity.Player%22,%22filter%22:%22update%20Player%20p%20set%20p.price%20=%20(p.price%20+%20:price)%20where%20p.id%20=%20:id%22,%22type%22:%22F%22,%22params%22:%22%5B%5C%22price%5C%22,%5C%22id%5C%22%5D%22%7D" name="{{cronapi.database.Operations.update}}">
+              <arg name="price"/>
+              <arg name="id"/>
+            </mutation>
+            <value name="ARG0">
+              <block asynccall="false" colour="#aa2f00" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="zr+SayM]f#3S!z$#Dpyg" multilayer="false" namespace="cronapi.database.Operations.getField" origintype="procedures_get_field" output="true" returntype="ObjectType.OBJECT" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EObter%20campo%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20para%20obter%20campo%20do%20registro%20do%20cursor%20atual%20da%20fonte%20de%20dados%20%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Fonte%20de%20dados%20:%20Objeto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Nome%20do%20campo%20:%20Texto%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Objeto%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22http://localhost:80/help?type=blockly&amp;amp;id=cronapi.database.Operations.getField%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_get_field">
+                <mutation name="{{cronapi.database.Operations.getField}}">
+                  <arg name="Fonte de dados"/>
+                  <arg name="Nome do campo"/>
+                </mutation>
+                <value name="PARAM0">
+                  <block asynccall="false" colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="341sL.uxgwKuk5H_O`W?" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                    <field customattributes="" name="VAR">PlayerScore&lt;fc.entity.PlayerScore&gt;</field>
+                  </block>
+                </value>
+                <value name="PARAM1">
+                  <block asynccall="false" colour="#db802b" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="/`Js#.rYU51lgKG]oj8e" origintype="procedures_get_field_datasource" output="true" type="procedures_get_field_datasource">
+                    <mutation name="">
+                      <arg label="description" value="description"/>
+                      <arg label="id" value="id"/>
+                      <arg label="match" value="match"/>
+                      <arg label="movePrice" value="movePrice"/>
+                      <arg label="player" value="player"/>
+                    </mutation>
+                    <field customattributes="" name="SELECT">movePrice</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <value name="ARG1">
+              <block asynccall="false" colour="#aa2f00" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="N-[~PF{=G7[su8qR,h?7" multilayer="false" namespace="cronapi.database.Operations.getField" origintype="procedures_get_field" output="true" returntype="ObjectType.OBJECT" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EObter%20campo%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20para%20obter%20campo%20do%20registro%20do%20cursor%20atual%20da%20fonte%20de%20dados%20%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Fonte%20de%20dados%20:%20Objeto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Nome%20do%20campo%20:%20Texto%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Objeto%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22http://localhost:80/help?type=blockly&amp;amp;id=cronapi.database.Operations.getField%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_get_field">
+                <mutation name="{{cronapi.database.Operations.getField}}">
+                  <arg name="Fonte de dados"/>
+                  <arg name="Nome do campo"/>
+                </mutation>
+                <value name="PARAM0">
+                  <block asynccall="false" colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="W8M=mz~An05$a6@a2hdz" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                    <field customattributes="" name="VAR">PlayerScore&lt;fc.entity.PlayerScore&gt;</field>
+                  </block>
+                </value>
+                <value name="PARAM1">
+                  <block asynccall="false" colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="BQBW.8+6@pAD]Wa|Zqj/" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                    <field customattributes="" name="TEXT">player.id</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+        </statement>
+        <statement name="ELSE">
+          <block asynccall="false" colour="#aa2f00" dependencyby="Anb:u5+^,0vLkL9QIqn5" id=".Qyr7n@!E9$PB%+mMNk}" multilayer="false" namespace="cronapi.database.Operations.update" origintype="procedures_sql_update_callnoreturn" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EAtualizar%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20atualiza%20um%20registro%20no%20banco%20de%20dados%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Fonte%20de%20dados%20:%20Tabela%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Entidade%20:%20Objeto%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22http://localhost:80/help?type=blockly&amp;amp;id=cronapi.database.Operations.update%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_sql_update_callnoreturn">
+            <mutation data="%7B%22queryBuilderJson%22:%7B%22isEmpty%22:true,%22isRawSql%22:true,%22sqlContent%22:%22update%20Player%20p%20set%20p.price%20=%20(p.price%20+%20:price)%20where%20p.id%20=%20:id%22,%22multiTenant%22:false,%22paginatorAutomatic%22:false,%22pagination%22:false%7D,%22entity%22:%22Player%22,%22entityFullName%22:%22fc.entity.Player%22,%22filter%22:%22update%20Player%20p%20set%20p.price%20=%20(p.price%20+%20:price)%20where%20p.id%20=%20:id%22,%22type%22:%22F%22,%22params%22:%22%5B%5C%22price%5C%22,%5C%22id%5C%22%5D%22%7D" name="{{cronapi.database.Operations.update}}">
+              <arg name="price"/>
+              <arg name="id"/>
+            </mutation>
+            <value name="ARG0">
+              <block asynccall="false" colour="#5b6da5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="bYuy-jqN}t3yYUNkkNZf" origintype="math_arithmetic" output="true" tooltip="function () { [native code] }" type="math_arithmetic">
+                <mutation items="2"/>
+                <field customattributes="" name="OP1">MULTIPLY</field>
+                <value name="ARG0">
+                  <block asynccall="false" colour="#aa2f00" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="WUbd)|ogu-ip}BjbAB-+" multilayer="false" namespace="cronapi.database.Operations.getField" origintype="procedures_get_field" output="true" returntype="ObjectType.OBJECT" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EObter%20campo%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20para%20obter%20campo%20do%20registro%20do%20cursor%20atual%20da%20fonte%20de%20dados%20%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Fonte%20de%20dados%20:%20Objeto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Nome%20do%20campo%20:%20Texto%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Objeto%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22http://localhost:80/help?type=blockly&amp;amp;id=cronapi.database.Operations.getField%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_get_field">
+                    <mutation name="{{cronapi.database.Operations.getField}}">
+                      <arg name="Fonte de dados"/>
+                      <arg name="Nome do campo"/>
+                    </mutation>
+                    <value name="PARAM0">
+                      <block asynccall="false" colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="M;:^B.U|,c$?DnE|O|WJ" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field customattributes="" name="VAR">PlayerScore&lt;fc.entity.PlayerScore&gt;</field>
+                      </block>
+                    </value>
+                    <value name="PARAM1">
+                      <block asynccall="false" colour="#db802b" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="lp0aNp[I.)8G`LI7TxY{" origintype="procedures_get_field_datasource" output="true" type="procedures_get_field_datasource">
+                        <mutation name="">
+                          <arg label="description" value="description"/>
+                          <arg label="id" value="id"/>
+                          <arg label="match" value="match"/>
+                          <arg label="movePrice" value="movePrice"/>
+                          <arg label="player" value="player"/>
+                        </mutation>
+                        <field customattributes="" name="SELECT">movePrice</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <value name="ARG1">
+                  <block asynccall="false" colour="#5b67a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="#8tu}Rd]@@;fmF`}zH/2" origintype="math_number" output="true" tooltip="function () { [native code] }" type="math_number">
+                    <field customattributes="" name="NUM">-1</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <value name="ARG1">
+              <block asynccall="false" colour="#aa2f00" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="{p/y|rHusyV8AP*I~Tr1" multilayer="false" namespace="cronapi.database.Operations.getField" origintype="procedures_get_field" output="true" returntype="ObjectType.OBJECT" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EObter%20campo%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20para%20obter%20campo%20do%20registro%20do%20cursor%20atual%20da%20fonte%20de%20dados%20%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Fonte%20de%20dados%20:%20Objeto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Nome%20do%20campo%20:%20Texto%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Objeto%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22http://localhost:80/help?type=blockly&amp;amp;id=cronapi.database.Operations.getField%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_get_field">
+                <mutation name="{{cronapi.database.Operations.getField}}">
+                  <arg name="Fonte de dados"/>
+                  <arg name="Nome do campo"/>
+                </mutation>
+                <value name="PARAM0">
+                  <block asynccall="false" colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="mxVpvJz.vOrn({Q$36z9" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                    <field customattributes="" name="VAR">PlayerScore&lt;fc.entity.PlayerScore&gt;</field>
+                  </block>
+                </value>
+                <value name="PARAM1">
+                  <block asynccall="false" colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id=".5=NB~_c0dNNf],]SV_u" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                    <field customattributes="" name="TEXT">player.id</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+</blockly>

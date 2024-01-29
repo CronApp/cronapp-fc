@@ -1,0 +1,136 @@
+{
+  "customId": "query791150",
+  "queryName": "Player Score With Price Calculation",
+  "sourceType": "entityFullName",
+  "baseEntity": null,
+  "blockly": null,
+  "entitySimpleName": "PlayerScore",
+  "entityFullName": "fc.entity.PlayerScore",
+  "query": {
+    "isEmpty": true,
+    "isRawSql": true,
+    "sqlContent": "select p.id, p.description, p.movePrice, p.match, p.player, CONCAT(p.player.name, \u0027 - \u0027, p.player.team.name) player_with_team_name from PlayerScore p",
+    "multiTenant": false,
+    "paginatorAutomatic": false,
+    "pagination": false
+  },
+  "queryParamsValues": [],
+  "verbs": {
+    "GET": true,
+    "GETAuthorities": null,
+    "POST": true,
+    "POSTAuthorities": null,
+    "PUT": true,
+    "PUTAuthorities": null,
+    "DELETE": true,
+    "DELETEAuthorities": null,
+    "FILTER": true,
+    "FILTERAuthorities": null,
+    "COUNT": true,
+    "COUNTAuthorities": null
+  },
+  "events": {
+    "beforeInsert": null,
+    "beforeUpdate": null,
+    "beforeDelete": null,
+    "afterInsert": {
+      "type": "server",
+      "blocklyMethod": "AfterInsert",
+      "blocklyClass": "blockly.PlayerScore",
+      "blocklyLanguage": "java",
+      "blocklyParams": [
+        {
+          "id": "9ba86fe3",
+          "name": "PlayerScore\u0026lt;fc.entity.PlayerScore\u0026gt;",
+          "value": "data",
+          "type": "CONSTANT"
+        }
+      ],
+      "blocklyJson": {
+        "namespace": "blockly.PlayerScore",
+        "sourcePath": "src/main/java/blockly/PlayerScore.blockly",
+        "language": "java",
+        "methods": [
+          {
+            "name": "AfterInsert",
+            "hasReturn": "true",
+            "params": [
+              "PlayerScore\u0026lt;fc.entity.PlayerScore\u0026gt;"
+            ]
+          }
+        ]
+      }
+    },
+    "afterUpdate": null,
+    "afterDelete": {
+      "type": "server",
+      "blocklyMethod": "AfterDelete",
+      "blocklyClass": "blockly.PlayerScore",
+      "blocklyLanguage": "java",
+      "blocklyParams": [
+        {
+          "id": "f71abde5",
+          "name": "PlayerScore\u0026lt;fc.entity.PlayerScore\u0026gt;",
+          "value": "data",
+          "type": "CUSTOM"
+        }
+      ],
+      "blocklyJson": {
+        "namespace": "blockly.PlayerScore",
+        "sourcePath": "src/main/java/blockly/PlayerScore.blockly",
+        "language": "java",
+        "methods": [
+          {
+            "name": "AfterInsert",
+            "hasReturn": "true",
+            "params": [
+              "PlayerScore\u0026lt;fc.entity.PlayerScore\u0026gt;"
+            ]
+          },
+          {
+            "name": "AfterDelete",
+            "hasReturn": "true",
+            "params": [
+              "PlayerScore\u0026lt;fc.entity.PlayerScore\u0026gt;"
+            ]
+          }
+        ]
+      }
+    },
+    "onNavigate": null,
+    "onAuthorize": null,
+    "onError": null
+  },
+  "defaultValues": {
+    "id": null,
+    "description": null,
+    "movePrice": null,
+    "player": null,
+    "match": null
+  },
+  "defaultValuesProperties": {
+    "id": null,
+    "description": null,
+    "movePrice": null,
+    "player": null,
+    "match": null
+  },
+  "security": {
+    "id": null,
+    "description": null,
+    "movePrice": null,
+    "player": null,
+    "match": null
+  },
+  "calcFields": {},
+  "calcFieldsSecurity": {},
+  "calcFieldsProperties": {},
+  "headers": {},
+  "errorHandles": {
+    "primaryKey": null,
+    "foreignKey": null
+  },
+  "serviceUrl": "api/cronapi/odata/v2/fc/query791150/",
+  "audit": false,
+  "swagger": false
+}

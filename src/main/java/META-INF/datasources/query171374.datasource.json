@@ -1,0 +1,119 @@
+{
+  "customId": "query171374",
+  "queryName": "Active Rounds",
+  "sourceType": "entityFullName",
+  "baseEntity": null,
+  "blockly": null,
+  "entitySimpleName": "Round",
+  "entityFullName": "fc.entity.Round",
+  "query": {
+    "isValid": true,
+    "isEmpty": false,
+    "operationType": "object",
+    "type": "select",
+    "rulesEntity": [
+      {
+        "entity": "Round",
+        "namespace": "fc.entity.Round",
+        "alias": "r"
+      }
+    ],
+    "rulesSelect": [
+      {
+        "func": "get",
+        "field": "r",
+        "type": "string"
+      }
+    ],
+    "rulesGroupBy": [],
+    "rulesHaving": [],
+    "rulesOrderBy": [
+      {
+        "func": "get",
+        "field": "r.number",
+        "order": "asc"
+      }
+    ],
+    "rules": {
+      "condition": "OR",
+      "rules": [
+        {
+          "id": "r.session.finished",
+          "field": "r.session.finished",
+          "type": "boolean",
+          "input": "text",
+          "operator": "equal",
+          "value": "false",
+          "valueIsField": false
+        }
+      ],
+      "not": false,
+      "valid": true
+    },
+    "isRawSql": false,
+    "multiTenant": false,
+    "paginatorAutomatic": false,
+    "pagination": false
+  },
+  "queryParamsValues": [],
+  "verbs": {
+    "GET": true,
+    "GETAuthorities": null,
+    "POST": true,
+    "POSTAuthorities": null,
+    "PUT": true,
+    "PUTAuthorities": null,
+    "DELETE": true,
+    "DELETEAuthorities": null,
+    "FILTER": true,
+    "FILTERAuthorities": null,
+    "COUNT": true,
+    "COUNTAuthorities": null
+  },
+  "events": {
+    "beforeInsert": null,
+    "beforeUpdate": null,
+    "beforeDelete": null,
+    "afterInsert": null,
+    "afterUpdate": null,
+    "afterDelete": null,
+    "onNavigate": null,
+    "onAuthorize": null,
+    "onError": null
+  },
+  "defaultValues": {
+    "id": null,
+    "number": null,
+    "stard": null,
+    "end": null,
+    "finished": null,
+    "session": null
+  },
+  "defaultValuesProperties": {
+    "id": null,
+    "number": null,
+    "stard": null,
+    "end": null,
+    "finished": null,
+    "session": null
+  },
+  "security": {
+    "id": null,
+    "number": null,
+    "stard": null,
+    "end": null,
+    "finished": null,
+    "session": null
+  },
+  "calcFields": {},
+  "calcFieldsSecurity": {},
+  "calcFieldsProperties": {},
+  "headers": {},
+  "errorHandles": {
+    "primaryKey": null,
+    "foreignKey": null
+  },
+  "serviceUrl": "api/cronapi/odata/v2/fc/query171374/",
+  "audit": false,
+  "swagger": false
+}

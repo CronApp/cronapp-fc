@@ -1,0 +1,75 @@
+{
+  "customId": "query227951",
+  "queryName": "Players who scored in the round",
+  "sourceType": "entityFullName",
+  "baseEntity": null,
+  "blockly": null,
+  "entitySimpleName": "PlayerScore",
+  "entityFullName": "fc.entity.PlayerScore",
+  "query": {
+    "isEmpty": true,
+    "isRawSql": true,
+    "sqlContent": "select p.description, p.player.id, p.player.name, p.match.playDate,\n case when p.movePrice \u003e 0 then CONCAT(\u0027Valorizou $ \u0027, p.movePrice) else CONCAT(\u0027Desvalorizou $ \u0027, p.movePrice*-1) end valuedOrDevalued, \n CONCAT(p.match.team1.name, \u0027 \u0027, case when p.match.team1Score is null then \u0027\u0027 else p.match.team1Score end,\n \u0027 x \u0027, case when p.match.team2Score is null then \u0027\u0027 else p.match.team2Score end, \u0027 \u0027, p.match.team2.name) game, \n p.player.img\n\n from PlayerScore p where p.match.round.session.finished \u003d false AND p.match.round.finished \u003d false",
+    "multiTenant": false,
+    "paginatorAutomatic": false,
+    "pagination": false
+  },
+  "queryParamsValues": [],
+  "verbs": {
+    "GET": true,
+    "GETAuthorities": null,
+    "POST": true,
+    "POSTAuthorities": null,
+    "PUT": true,
+    "PUTAuthorities": null,
+    "DELETE": true,
+    "DELETEAuthorities": null,
+    "FILTER": true,
+    "FILTERAuthorities": null,
+    "COUNT": true,
+    "COUNTAuthorities": null
+  },
+  "events": {
+    "beforeInsert": null,
+    "beforeUpdate": null,
+    "beforeDelete": null,
+    "afterInsert": null,
+    "afterUpdate": null,
+    "afterDelete": null,
+    "onNavigate": null,
+    "onAuthorize": null,
+    "onError": null
+  },
+  "defaultValues": {
+    "id": null,
+    "description": null,
+    "movePrice": null,
+    "player": null,
+    "match": null
+  },
+  "defaultValuesProperties": {
+    "id": null,
+    "description": null,
+    "movePrice": null,
+    "player": null,
+    "match": null
+  },
+  "security": {
+    "id": null,
+    "description": null,
+    "movePrice": null,
+    "player": null,
+    "match": null
+  },
+  "calcFields": {},
+  "calcFieldsSecurity": {},
+  "calcFieldsProperties": {},
+  "headers": {},
+  "errorHandles": {
+    "primaryKey": null,
+    "foreignKey": null
+  },
+  "serviceUrl": "api/cronapi/odata/v2/fc/query227951/",
+  "audit": false,
+  "swagger": false
+}

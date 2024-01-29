@@ -1,0 +1,196 @@
+{
+  "customId": "query600581",
+  "queryName": "Matchs formated with images",
+  "sourceType": "entityFullName",
+  "baseEntity": null,
+  "blockly": null,
+  "entitySimpleName": "Match",
+  "entityFullName": "fc.entity.Match",
+  "query": {
+    "isValid": true,
+    "isEmpty": false,
+    "operationType": "object",
+    "type": "select",
+    "rulesEntity": [
+      {
+        "entity": "Match",
+        "namespace": "fc.entity.Match",
+        "alias": "m"
+      }
+    ],
+    "rulesSelect": [
+      {
+        "func": "get",
+        "field": "m.id",
+        "type": "string"
+      },
+      {
+        "func": "get",
+        "field": "m.round",
+        "type": "string"
+      },
+      {
+        "func": "get",
+        "field": "m.team1.logo",
+        "type": "string"
+      },
+      {
+        "func": "get",
+        "field": "m.team2.logo",
+        "type": "string"
+      },
+      {
+        "func": "get",
+        "field": "m.playDate",
+        "type": "date"
+      },
+      {
+        "func": "get",
+        "field": "m.team1.name",
+        "type": "string"
+      },
+      {
+        "func": "get",
+        "field": "m.team1Score",
+        "type": "string"
+      },
+      {
+        "func": "get",
+        "field": "m.team2.name",
+        "type": "string"
+      },
+      {
+        "func": "get",
+        "field": "m.team2Score",
+        "type": "string"
+      }
+    ],
+    "rulesGroupBy": [],
+    "rulesHaving": [],
+    "rulesOrderBy": [
+      {
+        "func": "get",
+        "field": "m.playDate",
+        "order": "asc"
+      }
+    ],
+    "rules": {
+      "condition": "AND",
+      "rules": [],
+      "not": false,
+      "valid": true
+    },
+    "isRawSql": false,
+    "multiTenant": false,
+    "paginatorAutomatic": false,
+    "pagination": false
+  },
+  "queryParamsValues": [],
+  "verbs": {
+    "GET": true,
+    "GETAuthorities": null,
+    "POST": true,
+    "POSTAuthorities": null,
+    "PUT": true,
+    "PUTAuthorities": null,
+    "DELETE": true,
+    "DELETEAuthorities": null,
+    "FILTER": true,
+    "FILTERAuthorities": null,
+    "COUNT": true,
+    "COUNTAuthorities": null
+  },
+  "events": {
+    "beforeInsert": null,
+    "beforeUpdate": null,
+    "beforeDelete": null,
+    "afterInsert": null,
+    "afterUpdate": null,
+    "afterDelete": null,
+    "onNavigate": null,
+    "onAuthorize": null,
+    "onError": null
+  },
+  "defaultValues": {
+    "id": null,
+    "playDate": null,
+    "team1": null,
+    "team1Score": null,
+    "team2": null,
+    "team2Score": null,
+    "finished": null,
+    "round": null
+  },
+  "defaultValuesProperties": {
+    "id": null,
+    "playDate": null,
+    "team1": null,
+    "team1Score": null,
+    "team2": null,
+    "team2Score": null,
+    "finished": null,
+    "round": null
+  },
+  "security": {
+    "id": null,
+    "playDate": null,
+    "team1": null,
+    "team1Score": null,
+    "team2": null,
+    "team2Score": null,
+    "finished": null,
+    "round": null
+  },
+  "calcFields": {
+    "game": {
+      "type": "server",
+      "blocklyMethod": "CreateTeamScore",
+      "blocklyClass": "blockly.query.help.MatchsFormatedWithImages",
+      "blocklyLanguage": "java",
+      "blocklyParams": [
+        {
+          "id": "70f71248",
+          "name": "data",
+          "value": "data",
+          "type": "CUSTOM"
+        }
+      ],
+      "blocklyJson": {
+        "namespace": "blockly.query.help.MatchsFormatedWithImages",
+        "sourcePath": "src/main/java/blockly/query/help/MatchsFormatedWithImages.blockly",
+        "language": "java",
+        "methods": [
+          {
+            "name": "CreateTeamScore",
+            "hasReturn": "true",
+            "params": [
+              "data"
+            ]
+          }
+        ]
+      },
+      "blocklyGETMethod": null,
+      "blocklyPOSTMethod": null,
+      "blocklyPUTMethod": null,
+      "blocklyDELETEMethod": null,
+      "blocklyFILTERMethod": null,
+      "blocklyCOUNTMethod": null
+    }
+  },
+  "calcFieldsSecurity": {
+    "game": null
+  },
+  "calcFieldsProperties": {
+    "game": {
+      "type": "String"
+    }
+  },
+  "headers": {},
+  "errorHandles": {
+    "primaryKey": null,
+    "foreignKey": null
+  },
+  "serviceUrl": "api/cronapi/odata/v2/fc/query600581/",
+  "audit": false,
+  "swagger": false
+}
