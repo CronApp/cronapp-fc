@@ -21,3 +21,8 @@ ion-content button {
     border-right: 4px solid transparent;
     border-left: 4px solid transparent;
 }
+
+.button-back { 
+  background-color: rgb(56, 87, 26)!important;
+   background: rgb(56, 87, 26)!important;
+}
