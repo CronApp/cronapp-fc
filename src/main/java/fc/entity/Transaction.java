@@ -2,24 +2,28 @@
 package fc.entity;
 
 import java.io.*;
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.util.*;
-import javax.xml.bind.annotation.*;
+import jakarta.xml.bind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonFilter;
 import cronapi.rest.security.CronappSecurity;
 import cronapi.swagger.CronappSwagger;
 
 
+
+import cronapp.framework.core.persistence.*;
+
 /**
 * Classe que representa a tabela TRANSACTION
 * @generated
 */
-@Entity
-@Table(name = "\"TRANSACTION\"")
+@jakarta.persistence.Entity
+@jakarta.persistence.Table(name = "\"TRANSACTION\"")
 @XmlRootElement
 @CronappSecurity
 @JsonFilter("fc.entity.Transaction")
+@CronappTable(role=CronappTableRole.CLASS)
 public class Transaction implements Serializable {
     /**
     * UID da classe, necessário na serialização
@@ -31,6 +35,7 @@ public class Transaction implements Serializable {
     * @generated
     */
     @Id
+    @CronappColumn(attributeType="STRING", label="Id", defaultValue = "UUID.randomUUID().toString().toUpperCase()")
     @Column(name = "id", nullable = false, insertable=true, updatable=true)
         private java.lang.String id = UUID.randomUUID().toString().toUpperCase();
 
@@ -38,6 +43,7 @@ public class Transaction implements Serializable {
     /**
     * @generated
     */
+    @CronappColumn(attributeType="STRING", label="User Id")
     @Column(name = "userId", nullable = true, unique = false, insertable=true, updatable=true)
         
         private java.lang.String userId;
@@ -46,6 +52,7 @@ public class Transaction implements Serializable {
     /**
     * @generated
     */
+    @CronappColumn(attributeType="STRING", label="Type")
     @Column(name = "type", nullable = true, unique = false, insertable=true, updatable=true)
         
         private java.lang.String type;
@@ -55,6 +62,7 @@ public class Transaction implements Serializable {
     * @generated
     */
     @Temporal(TemporalType.TIMESTAMP)
+    @CronappColumn(attributeType="DATETIME", label="Date")
     @Column(name = "date", nullable = true, unique = false, insertable=true, updatable=true)
         
         private java.util.Date date;
@@ -63,6 +71,7 @@ public class Transaction implements Serializable {
     /**
     * @generated
     */
+    @CronappColumn(attributeType="DOUBLE", label="Value")
     @Column(name = "value", nullable = true, unique = false, insertable=true, updatable=true)
         
         private java.lang.Double value;
@@ -72,7 +81,7 @@ public class Transaction implements Serializable {
     * @generated
     */
     @ManyToOne
-    @JoinColumn(name="fk_player", nullable = true, referencedColumnName = "id", insertable=true, updatable=true, foreignKey = @ForeignKey(name = "", foreignKeyDefinition = "FOREIGN KEY (fk_player) REFERENCES PLAYER (id)"))
+    @JoinColumn(name="fk_player", nullable = true, referencedColumnName = "id", insertable=true, updatable=true)
         
         private Player player;
 

@@ -2,24 +2,28 @@
 package fc.entity;
 
 import java.io.*;
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.util.*;
-import javax.xml.bind.annotation.*;
+import jakarta.xml.bind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonFilter;
 import cronapi.rest.security.CronappSecurity;
 import cronapi.swagger.CronappSwagger;
 
 
+
+import cronapp.framework.core.persistence.*;
+
 /**
 * Classe que representa a tabela TEAM
 * @generated
 */
-@Entity
-@Table(name = "\"TEAM\"")
+@jakarta.persistence.Entity
+@jakarta.persistence.Table(name = "\"TEAM\"")
 @XmlRootElement
 @CronappSecurity
 @JsonFilter("fc.entity.Team")
+@CronappTable(role=CronappTableRole.CLASS)
 public class Team implements Serializable {
     /**
     * UID da classe, necessário na serialização
@@ -31,6 +35,7 @@ public class Team implements Serializable {
     * @generated
     */
     @Id
+    @CronappColumn(attributeType="STRING", label="Id", defaultValue = "UUID.randomUUID().toString().toUpperCase()")
     @Column(name = "id", nullable = false, insertable=true, updatable=true)
         private java.lang.String id = UUID.randomUUID().toString().toUpperCase();
 
@@ -38,6 +43,7 @@ public class Team implements Serializable {
     /**
     * @generated
     */
+    @CronappColumn(attributeType="STRING", label="Name")
     @Column(name = "name", nullable = true, unique = false, insertable=true, updatable=true)
         
         private java.lang.String name;
@@ -46,6 +52,7 @@ public class Team implements Serializable {
     /**
     * @generated
     */
+    @CronappColumn(attributeType="IMAGE_DATABASE", label="Logo")
     @Column(name = "logo", nullable = true, unique = false, insertable=true, updatable=true)
         
         private byte[] logo;
