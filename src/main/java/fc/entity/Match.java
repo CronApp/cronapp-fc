@@ -2,24 +2,28 @@
 package fc.entity;
 
 import java.io.*;
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.util.*;
-import javax.xml.bind.annotation.*;
+import jakarta.xml.bind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonFilter;
 import cronapi.rest.security.CronappSecurity;
 import cronapi.swagger.CronappSwagger;
 
 
+
+import cronapp.framework.core.persistence.*;
+
 /**
 * Classe que representa a tabela MATCH
 * @generated
 */
-@Entity
-@Table(name = "\"MATCH\"")
+@jakarta.persistence.Entity
+@jakarta.persistence.Table(name = "\"MATCH\"")
 @XmlRootElement
 @CronappSecurity
 @JsonFilter("fc.entity.Match")
+@CronappTable(role=CronappTableRole.CLASS)
 public class Match implements Serializable {
     /**
     * UID da classe, necessário na serialização
@@ -31,6 +35,7 @@ public class Match implements Serializable {
     * @generated
     */
     @Id
+    @CronappColumn(attributeType="STRING", label="Id", defaultValue = "UUID.randomUUID().toString().toUpperCase()")
     @Column(name = "id", nullable = false, insertable=true, updatable=true)
         private java.lang.String id = UUID.randomUUID().toString().toUpperCase();
 
@@ -39,6 +44,7 @@ public class Match implements Serializable {
     * @generated
     */
     @Temporal(TemporalType.TIMESTAMP)
+    @CronappColumn(attributeType="DATETIME", label="Play Date")
     @Column(name = "playDate", nullable = false, unique = false, insertable=true, updatable=true)
         
         private java.util.Date playDate;
@@ -48,7 +54,7 @@ public class Match implements Serializable {
     * @generated
     */
     @ManyToOne
-    @JoinColumn(name="fk_team_1", nullable = false, referencedColumnName = "id", insertable=true, updatable=true, foreignKey = @ForeignKey(name = "", foreignKeyDefinition = "FOREIGN KEY (fk_team_1) REFERENCES TEAM (id)"))
+    @JoinColumn(name="fk_team_1", nullable = false, referencedColumnName = "id", insertable=true, updatable=true)
         
         private Team team1;
 
@@ -56,6 +62,7 @@ public class Match implements Serializable {
     /**
     * @generated
     */
+    @CronappColumn(attributeType="SHORT", label="Team 1 Score")
     @Column(name = "team1Score", nullable = true, unique = false, insertable=true, updatable=true)
         
         private java.lang.Short team1Score;
@@ -65,7 +72,7 @@ public class Match implements Serializable {
     * @generated
     */
     @ManyToOne
-    @JoinColumn(name="fk_team_2", nullable = false, referencedColumnName = "id", insertable=true, updatable=true, foreignKey = @ForeignKey(name = "", foreignKeyDefinition = "FOREIGN KEY (fk_team_2) REFERENCES TEAM (id)"))
+    @JoinColumn(name="fk_team_2", nullable = false, referencedColumnName = "id", insertable=true, updatable=true)
         
         private Team team2;
 
@@ -73,6 +80,7 @@ public class Match implements Serializable {
     /**
     * @generated
     */
+    @CronappColumn(attributeType="SHORT", label="Team 2 Score")
     @Column(name = "team2Score", nullable = true, unique = false, insertable=true, updatable=true)
         
         private java.lang.Short team2Score;
@@ -81,6 +89,7 @@ public class Match implements Serializable {
     /**
     * @generated
     */
+    @CronappColumn(attributeType="BOOLEAN", label="Finished")
     @Column(name = "finished", nullable = false, unique = false, insertable=true, updatable=true)
         
         private java.lang.Boolean finished;
@@ -90,7 +99,7 @@ public class Match implements Serializable {
     * @generated
     */
     @ManyToOne
-    @JoinColumn(name="fk_round", nullable = false, referencedColumnName = "id", insertable=true, updatable=true, foreignKey = @ForeignKey(name = "", foreignKeyDefinition = "FOREIGN KEY (fk_round) REFERENCES ROUND (id)"))
+    @JoinColumn(name="fk_round", nullable = false, referencedColumnName = "id", insertable=true, updatable=true)
         
         private Round round;
 

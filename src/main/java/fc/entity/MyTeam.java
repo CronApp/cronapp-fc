@@ -2,24 +2,28 @@
 package fc.entity;
 
 import java.io.*;
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.util.*;
-import javax.xml.bind.annotation.*;
+import jakarta.xml.bind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonFilter;
 import cronapi.rest.security.CronappSecurity;
 import cronapi.swagger.CronappSwagger;
 
 
+
+import cronapp.framework.core.persistence.*;
+
 /**
 * Classe que representa a tabela MYTEAM
 * @generated
 */
-@Entity
-@Table(name = "\"MYTEAM\"")
+@jakarta.persistence.Entity
+@jakarta.persistence.Table(name = "\"MYTEAM\"")
 @XmlRootElement
 @CronappSecurity
 @JsonFilter("fc.entity.MyTeam")
+@CronappTable(role=CronappTableRole.CLASS)
 public class MyTeam implements Serializable {
     /**
     * UID da classe, necessário na serialização
@@ -31,6 +35,7 @@ public class MyTeam implements Serializable {
     * @generated
     */
     @Id
+    @CronappColumn(attributeType="STRING", label="Id", defaultValue = "UUID.randomUUID().toString().toUpperCase()")
     @Column(name = "id", nullable = false, insertable=true, updatable=true)
         private java.lang.String id = UUID.randomUUID().toString().toUpperCase();
 
@@ -38,6 +43,7 @@ public class MyTeam implements Serializable {
     /**
     * @generated
     */
+    @CronappColumn(attributeType="STRING", label="Owner Name")
     @Column(name = "ownerName", nullable = true, unique = false, insertable=true, updatable=true)
         
         private java.lang.String ownerName;
@@ -46,6 +52,7 @@ public class MyTeam implements Serializable {
     /**
     * @generated
     */
+    @CronappColumn(attributeType="STRING", label="Team Name")
     @Column(name = "teamName", nullable = true, unique = false, insertable=true, updatable=true)
         
         private java.lang.String teamName;
@@ -54,6 +61,7 @@ public class MyTeam implements Serializable {
     /**
     * @generated
     */
+    @CronappColumn(attributeType="STRING", label="Tactical Scheme")
     @Column(name = "tacticalScheme", nullable = true, unique = false, insertable=true, updatable=true)
         
         private java.lang.String tacticalScheme;
@@ -63,7 +71,7 @@ public class MyTeam implements Serializable {
     * @generated
     */
     @ManyToOne
-    @JoinColumn(name="fk_player_1", nullable = true, referencedColumnName = "id", insertable=true, updatable=true, foreignKey = @ForeignKey(name = "", foreignKeyDefinition = "FOREIGN KEY (fk_player_1) REFERENCES PLAYER (id)"))
+    @JoinColumn(name="fk_player_1", nullable = true, referencedColumnName = "id", insertable=true, updatable=true)
         
         private Player player1;
 
@@ -72,7 +80,7 @@ public class MyTeam implements Serializable {
     * @generated
     */
     @ManyToOne
-    @JoinColumn(name="fk_player_2", nullable = true, referencedColumnName = "id", insertable=true, updatable=true, foreignKey = @ForeignKey(name = "", foreignKeyDefinition = "FOREIGN KEY (fk_player_2) REFERENCES PLAYER (id)"))
+    @JoinColumn(name="fk_player_2", nullable = true, referencedColumnName = "id", insertable=true, updatable=true)
         
         private Player player2;
 
@@ -81,7 +89,7 @@ public class MyTeam implements Serializable {
     * @generated
     */
     @ManyToOne
-    @JoinColumn(name="fk_player_3", nullable = true, referencedColumnName = "id", insertable=true, updatable=true, foreignKey = @ForeignKey(name = "", foreignKeyDefinition = "FOREIGN KEY (fk_player_3) REFERENCES PLAYER (id)"))
+    @JoinColumn(name="fk_player_3", nullable = true, referencedColumnName = "id", insertable=true, updatable=true)
         
         private Player player3;
 
@@ -90,7 +98,7 @@ public class MyTeam implements Serializable {
     * @generated
     */
     @ManyToOne
-    @JoinColumn(name="fk_player_4", nullable = true, referencedColumnName = "id", insertable=true, updatable=true, foreignKey = @ForeignKey(name = "", foreignKeyDefinition = "FOREIGN KEY (fk_player_4) REFERENCES PLAYER (id)"))
+    @JoinColumn(name="fk_player_4", nullable = true, referencedColumnName = "id", insertable=true, updatable=true)
         
         private Player player4;
 
@@ -99,7 +107,7 @@ public class MyTeam implements Serializable {
     * @generated
     */
     @ManyToOne
-    @JoinColumn(name="fk_player_5", nullable = true, referencedColumnName = "id", insertable=true, updatable=true, foreignKey = @ForeignKey(name = "", foreignKeyDefinition = "FOREIGN KEY (fk_player_5) REFERENCES PLAYER (id)"))
+    @JoinColumn(name="fk_player_5", nullable = true, referencedColumnName = "id", insertable=true, updatable=true)
         
         private Player player5;
 
@@ -108,7 +116,7 @@ public class MyTeam implements Serializable {
     * @generated
     */
     @ManyToOne
-    @JoinColumn(name="fk_player_6", nullable = true, referencedColumnName = "id", insertable=true, updatable=true, foreignKey = @ForeignKey(name = "", foreignKeyDefinition = "FOREIGN KEY (fk_player_6) REFERENCES PLAYER (id)"))
+    @JoinColumn(name="fk_player_6", nullable = true, referencedColumnName = "id", insertable=true, updatable=true)
         
         private Player player6;
 
@@ -117,7 +125,7 @@ public class MyTeam implements Serializable {
     * @generated
     */
     @ManyToOne
-    @JoinColumn(name="fk_player_7", nullable = true, referencedColumnName = "id", insertable=true, updatable=true, foreignKey = @ForeignKey(name = "", foreignKeyDefinition = "FOREIGN KEY (fk_player_7) REFERENCES PLAYER (id)"))
+    @JoinColumn(name="fk_player_7", nullable = true, referencedColumnName = "id", insertable=true, updatable=true)
         
         private Player player7;
 
@@ -126,7 +134,7 @@ public class MyTeam implements Serializable {
     * @generated
     */
     @ManyToOne
-    @JoinColumn(name="fk_player_8", nullable = true, referencedColumnName = "id", insertable=true, updatable=true, foreignKey = @ForeignKey(name = "", foreignKeyDefinition = "FOREIGN KEY (fk_player_8) REFERENCES PLAYER (id)"))
+    @JoinColumn(name="fk_player_8", nullable = true, referencedColumnName = "id", insertable=true, updatable=true)
         
         private Player player8;
 
@@ -135,7 +143,7 @@ public class MyTeam implements Serializable {
     * @generated
     */
     @ManyToOne
-    @JoinColumn(name="fk_player_9", nullable = true, referencedColumnName = "id", insertable=true, updatable=true, foreignKey = @ForeignKey(name = "", foreignKeyDefinition = "FOREIGN KEY (fk_player_9) REFERENCES PLAYER (id)"))
+    @JoinColumn(name="fk_player_9", nullable = true, referencedColumnName = "id", insertable=true, updatable=true)
         
         private Player player9;
 
@@ -144,7 +152,7 @@ public class MyTeam implements Serializable {
     * @generated
     */
     @ManyToOne
-    @JoinColumn(name="fk_player_10", nullable = true, referencedColumnName = "id", insertable=true, updatable=true, foreignKey = @ForeignKey(name = "", foreignKeyDefinition = "FOREIGN KEY (fk_player_10) REFERENCES PLAYER (id)"))
+    @JoinColumn(name="fk_player_10", nullable = true, referencedColumnName = "id", insertable=true, updatable=true)
         
         private Player player10;
 
@@ -153,7 +161,7 @@ public class MyTeam implements Serializable {
     * @generated
     */
     @ManyToOne
-    @JoinColumn(name="fk_player_11", nullable = true, referencedColumnName = "id", insertable=true, updatable=true, foreignKey = @ForeignKey(name = "", foreignKeyDefinition = "FOREIGN KEY (fk_player_11) REFERENCES PLAYER (id)"))
+    @JoinColumn(name="fk_player_11", nullable = true, referencedColumnName = "id", insertable=true, updatable=true)
         
         private Player player11;
 
@@ -162,7 +170,7 @@ public class MyTeam implements Serializable {
     * @generated
     */
     @ManyToOne
-    @JoinColumn(name="fk_player_coach", nullable = true, referencedColumnName = "id", insertable=true, updatable=true, foreignKey = @ForeignKey(name = "", foreignKeyDefinition = "FOREIGN KEY (fk_player_coach) REFERENCES PLAYER (id)"))
+    @JoinColumn(name="fk_player_coach", nullable = true, referencedColumnName = "id", insertable=true, updatable=true)
         
         private Player coach;
 
@@ -171,7 +179,7 @@ public class MyTeam implements Serializable {
     * @generated
     */
     @ManyToOne
-    @JoinColumn(name="fk_player_reserve_1", nullable = true, referencedColumnName = "id", insertable=true, updatable=true, foreignKey = @ForeignKey(name = "", foreignKeyDefinition = "FOREIGN KEY (fk_player_reserve_1) REFERENCES PLAYER (id)"))
+    @JoinColumn(name="fk_player_reserve_1", nullable = true, referencedColumnName = "id", insertable=true, updatable=true)
         
         private Player playerReserve1;
 
@@ -180,7 +188,7 @@ public class MyTeam implements Serializable {
     * @generated
     */
     @ManyToOne
-    @JoinColumn(name="fk_player_reserve_2", nullable = true, referencedColumnName = "id", insertable=true, updatable=true, foreignKey = @ForeignKey(name = "", foreignKeyDefinition = "FOREIGN KEY (fk_player_reserve_2) REFERENCES PLAYER (id)"))
+    @JoinColumn(name="fk_player_reserve_2", nullable = true, referencedColumnName = "id", insertable=true, updatable=true)
         
         private Player playerReserve2;
 
@@ -189,7 +197,7 @@ public class MyTeam implements Serializable {
     * @generated
     */
     @ManyToOne
-    @JoinColumn(name="fk_player_reserve_3", nullable = true, referencedColumnName = "id", insertable=true, updatable=true, foreignKey = @ForeignKey(name = "", foreignKeyDefinition = "FOREIGN KEY (fk_player_reserve_3) REFERENCES PLAYER (id)"))
+    @JoinColumn(name="fk_player_reserve_3", nullable = true, referencedColumnName = "id", insertable=true, updatable=true)
         
         private Player playerReserve3;
 
@@ -198,7 +206,7 @@ public class MyTeam implements Serializable {
     * @generated
     */
     @ManyToOne
-    @JoinColumn(name="fk_player_reserve_4", nullable = true, referencedColumnName = "id", insertable=true, updatable=true, foreignKey = @ForeignKey(name = "", foreignKeyDefinition = "FOREIGN KEY (fk_player_reserve_4) REFERENCES PLAYER (id)"))
+    @JoinColumn(name="fk_player_reserve_4", nullable = true, referencedColumnName = "id", insertable=true, updatable=true)
         
         private Player playerReserve4;
 
@@ -206,6 +214,7 @@ public class MyTeam implements Serializable {
     /**
     * @generated
     */
+    @CronappColumn(attributeType="STRING", label="User Id")
     @Column(name = "userId", nullable = true, unique = false, insertable=true, updatable=true)
         
         private java.lang.String userId;

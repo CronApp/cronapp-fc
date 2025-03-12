@@ -2,24 +2,28 @@
 package fc.entity;
 
 import java.io.*;
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.util.*;
-import javax.xml.bind.annotation.*;
+import jakarta.xml.bind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonFilter;
 import cronapi.rest.security.CronappSecurity;
 import cronapi.swagger.CronappSwagger;
 
 
+
+import cronapp.framework.core.persistence.*;
+
 /**
 * Classe que representa a tabela PLAYER
 * @generated
 */
-@Entity
-@Table(name = "\"PLAYER\"")
+@jakarta.persistence.Entity
+@jakarta.persistence.Table(name = "\"PLAYER\"")
 @XmlRootElement
 @CronappSecurity
 @JsonFilter("fc.entity.Player")
+@CronappTable(role=CronappTableRole.ASSOCIATION_CLASS)
 public class Player implements Serializable {
     /**
     * UID da classe, necessário na serialização
@@ -31,6 +35,7 @@ public class Player implements Serializable {
     * @generated
     */
     @Id
+    @CronappColumn(attributeType="STRING", label="Id", defaultValue = "UUID.randomUUID().toString().toUpperCase()")
     @Column(name = "id", nullable = false, insertable=true, updatable=true)
         private java.lang.String id = UUID.randomUUID().toString().toUpperCase();
 
@@ -38,6 +43,7 @@ public class Player implements Serializable {
     /**
     * @generated
     */
+    @CronappColumn(attributeType="STRING", label="Name")
     @Column(name = "name", nullable = true, unique = false, insertable=true, updatable=true)
         
         private java.lang.String name;
@@ -46,6 +52,7 @@ public class Player implements Serializable {
     /**
     * @generated
     */
+    @CronappColumn(attributeType="IMAGE_DATABASE", label="Img")
     @Column(name = "img", nullable = true, unique = false, insertable=true, updatable=true)
         
         private byte[] img;
@@ -55,7 +62,7 @@ public class Player implements Serializable {
     * @generated
     */
     @ManyToOne
-    @JoinColumn(name="fk_team", nullable = true, referencedColumnName = "id", insertable=true, updatable=true, foreignKey = @ForeignKey(name = "", foreignKeyDefinition = "FOREIGN KEY (fk_team) REFERENCES TEAM (id)"))
+    @JoinColumn(name="fk_team", nullable = true, referencedColumnName = "id", insertable=true, updatable=true)
         
         private Team team;
 
@@ -64,7 +71,7 @@ public class Player implements Serializable {
     * @generated
     */
     @ManyToOne
-    @JoinColumn(name="fk_position", nullable = true, referencedColumnName = "id", insertable=true, updatable=true, foreignKey = @ForeignKey(name = "", foreignKeyDefinition = "FOREIGN KEY (fk_position) REFERENCES POSITION (id)"))
+    @JoinColumn(name="fk_position", nullable = true, referencedColumnName = "id", insertable=true, updatable=true)
         
         private Position position;
 
@@ -72,6 +79,7 @@ public class Player implements Serializable {
     /**
     * @generated
     */
+    @CronappColumn(attributeType="STRING", label="Total Games Played")
     @Column(name = "totalGamesPlayed", nullable = true, unique = false, insertable=true, updatable=true)
         
         private java.lang.String totalGamesPlayed;
@@ -80,6 +88,7 @@ public class Player implements Serializable {
     /**
     * @generated
     */
+    @CronappColumn(attributeType="DOUBLE", label="Price")
     @Column(name = "price", nullable = true, unique = false, insertable=true, updatable=true)
         
         private java.lang.Double price;
@@ -88,6 +97,7 @@ public class Player implements Serializable {
     /**
     * @generated
     */
+    @CronappColumn(attributeType="DOUBLE", label="Old Price")
     @Column(name = "oldPrice", nullable = true, unique = false, insertable=true, updatable=true)
         
         private java.lang.Double oldPrice;

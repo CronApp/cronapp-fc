@@ -2,24 +2,28 @@
 package fc.entity;
 
 import java.io.*;
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.util.*;
-import javax.xml.bind.annotation.*;
+import jakarta.xml.bind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonFilter;
 import cronapi.rest.security.CronappSecurity;
 import cronapi.swagger.CronappSwagger;
 
 
+
+import cronapp.framework.core.persistence.*;
+
 /**
 * Classe que representa a tabela ROUND
 * @generated
 */
-@Entity
-@Table(name = "\"ROUND\"")
+@jakarta.persistence.Entity
+@jakarta.persistence.Table(name = "\"ROUND\"")
 @XmlRootElement
 @CronappSecurity
 @JsonFilter("fc.entity.Round")
+@CronappTable(role=CronappTableRole.CLASS)
 public class Round implements Serializable {
     /**
     * UID da classe, necessário na serialização
@@ -31,6 +35,7 @@ public class Round implements Serializable {
     * @generated
     */
     @Id
+    @CronappColumn(attributeType="STRING", label="Id", defaultValue = "UUID.randomUUID().toString().toUpperCase()")
     @Column(name = "id", nullable = false, insertable=true, updatable=true)
         private java.lang.String id = UUID.randomUUID().toString().toUpperCase();
 
@@ -38,7 +43,8 @@ public class Round implements Serializable {
     /**
     * @generated
     */
-    @Column(name = "number", nullable = false, unique = false, insertable=true, updatable=true)
+    @CronappColumn(attributeType="SHORT", label="Number")
+    @Column(name = "number_col", nullable = false, unique = false, insertable=true, updatable=true)
         
         private java.lang.Short number;
 
@@ -47,6 +53,7 @@ public class Round implements Serializable {
     * @generated
     */
     @Temporal(TemporalType.DATE)
+    @CronappColumn(attributeType="DATE", label="Stard")
     @Column(name = "stard", nullable = false, unique = false, insertable=true, updatable=true)
         
         private java.util.Date stard;
@@ -56,7 +63,8 @@ public class Round implements Serializable {
     * @generated
     */
     @Temporal(TemporalType.TIMESTAMP)
-    @Column(name = "end", nullable = false, unique = false, insertable=true, updatable=true)
+    @CronappColumn(attributeType="DATETIME", label="End")
+    @Column(name = "end_col", nullable = false, unique = false, insertable=true, updatable=true)
         
         private java.util.Date end;
 
@@ -64,6 +72,7 @@ public class Round implements Serializable {
     /**
     * @generated
     */
+    @CronappColumn(attributeType="BOOLEAN", label="Finished")
     @Column(name = "finished", nullable = false, unique = false, insertable=true, updatable=true)
         
         private java.lang.Boolean finished;
@@ -73,7 +82,7 @@ public class Round implements Serializable {
     * @generated
     */
     @ManyToOne
-    @JoinColumn(name="fk_session", nullable = false, referencedColumnName = "id", insertable=true, updatable=true, foreignKey = @ForeignKey(name = "", foreignKeyDefinition = "FOREIGN KEY (fk_session) REFERENCES SESSION (id)"))
+    @JoinColumn(name="fk_session", nullable = false, referencedColumnName = "id", insertable=true, updatable=true)
         
         private Session session;
 

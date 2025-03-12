@@ -2,24 +2,28 @@
 package fc.entity;
 
 import java.io.*;
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.util.*;
-import javax.xml.bind.annotation.*;
+import jakarta.xml.bind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonFilter;
 import cronapi.rest.security.CronappSecurity;
 import cronapi.swagger.CronappSwagger;
 
 
+
+import cronapp.framework.core.persistence.*;
+
 /**
 * Classe que representa a tabela PLAYERSCORE
 * @generated
 */
-@Entity
-@Table(name = "\"PLAYERSCORE\"")
+@jakarta.persistence.Entity
+@jakarta.persistence.Table(name = "\"PLAYERSCORE\"")
 @XmlRootElement
 @CronappSecurity
 @JsonFilter("fc.entity.PlayerScore")
+@CronappTable(role=CronappTableRole.ASSOCIATION_CLASS)
 public class PlayerScore implements Serializable {
     /**
     * UID da classe, necessário na serialização
@@ -31,6 +35,7 @@ public class PlayerScore implements Serializable {
     * @generated
     */
     @Id
+    @CronappColumn(attributeType="STRING", label="Id", defaultValue = "UUID.randomUUID().toString().toUpperCase()")
     @Column(name = "id", nullable = false, insertable=true, updatable=true)
         private java.lang.String id = UUID.randomUUID().toString().toUpperCase();
 
@@ -38,6 +43,7 @@ public class PlayerScore implements Serializable {
     /**
     * @generated
     */
+    @CronappColumn(attributeType="STRING", label="Description")
     @Column(name = "description", nullable = false, unique = false, insertable=true, updatable=true)
         
         private java.lang.String description;
@@ -46,6 +52,7 @@ public class PlayerScore implements Serializable {
     /**
     * @generated
     */
+    @CronappColumn(attributeType="DOUBLE", label="Move Price", mask="#.#00,00")
     @Column(name = "movePrice", nullable = false, unique = false, insertable=true, updatable=true)
         
         private java.lang.Double movePrice;
@@ -55,7 +62,7 @@ public class PlayerScore implements Serializable {
     * @generated
     */
     @ManyToOne
-    @JoinColumn(name="fk_player", nullable = false, referencedColumnName = "id", insertable=true, updatable=true, foreignKey = @ForeignKey(name = "", foreignKeyDefinition = "FOREIGN KEY (fk_player) REFERENCES PLAYER (id)"))
+    @JoinColumn(name="fk_player", nullable = false, referencedColumnName = "id", insertable=true, updatable=true)
         
         private Player player;
 
@@ -64,7 +71,7 @@ public class PlayerScore implements Serializable {
     * @generated
     */
     @ManyToOne
-    @JoinColumn(name="fk_match", nullable = false, referencedColumnName = "id", insertable=true, updatable=true, foreignKey = @ForeignKey(name = "", foreignKeyDefinition = "FOREIGN KEY (fk_match) REFERENCES MATCH (id)"))
+    @JoinColumn(name="fk_match", nullable = false, referencedColumnName = "id", insertable=true, updatable=true)
         
         private Match match;
 
