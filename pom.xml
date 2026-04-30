@@ -3,14 +3,14 @@
     <parent>
         <artifactId>cronapp-framework-spring</artifactId>
         <groupId>io.cronapp</groupId>
-        <version>4.0.0-RC.3</version>
+        <version>4.2.24</version>
         <relativePath></relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <groupId>io.cronapp.apps.cronappfc</groupId>
     <artifactId>io.cronapp.apps.cronappfc</artifactId>
-    <packaging>war</packaging>
-    <name>CronappFC</name>
+     <packaging>war</packaging>
+    <name>base</name>
     <version>1.0-SNAPSHOT</version>
     <url>http://maven.apache.org</url>
     <build>
@@ -25,7 +25,7 @@
                 </excludes>
             </resource>
             <resource>
-                <directory>src/main/resources</directory>
+                <directory>src/test/java</directory>
                 <includes>
                     <include>**</include>
                 </includes>
@@ -34,7 +34,7 @@
                 </excludes>
             </resource>
             <resource>
-                <directory>src/test/java</directory>
+                <directory>src/main/resources</directory>
                 <includes>
                     <include>**</include>
                 </includes>
@@ -61,15 +61,15 @@
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
             </plugin>
         </plugins>
     </build>
     <dependencies>
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
@@ -144,10 +144,6 @@
             <groupId>io.cronapp</groupId>
             <artifactId>cronapp-framework-auditlog</artifactId>
         </dependency>
-        <dependency>
-            <groupId>com.h2database</groupId>
-            <artifactId>h2</artifactId>
-        </dependency>
     </dependencies>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -155,8 +151,10 @@
         <project.cronospass.resource mimetype="folder/servercontext">config</project.cronospass.resource>
         <project.cronospass.resource mimetype="folder/src">src/main/java</project.cronospass.resource>
         <project.cronospass.resource mimetype="folder/web">src/main/mobileapp/www</project.cronospass.resource>
+        <project.cronospass.resource mimetype="folder/src">src/main/resources</project.cronospass.resource>
         <project.cronospass.resource mimetype="folder/web">src/main/webapp</project.cronospass.resource>
         <project.cronospass.resource mimetype="folder/regular">src/test</project.cronospass.resource>
+        <project.cronospass.resource mimetype="folder/regular">src/test/java</project.cronospass.resource>
         <project.cronospass.resource mimetype="folder/src">src/test/java</project.cronospass.resource>
     </properties>
 </project>
